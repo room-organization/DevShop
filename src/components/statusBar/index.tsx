@@ -15,9 +15,9 @@ export const StatusBar = () => {
  return (
    <View style={styles.container}>
     {
-      data.map(item => {
+      data.map(item  => {
         return (
-          <InfoStatusBar src={item}/>
+          <InfoStatusBar src={item} key={item}/>
         )
       })
     }
