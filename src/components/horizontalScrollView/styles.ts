@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
         maxHeight: 100,
         paddingVertical: 5,
         borderBottomWidth: 1,
-        
+        // backgroundColor: 'red'
 
     },
 

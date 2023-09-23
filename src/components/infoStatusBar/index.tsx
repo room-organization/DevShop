@@ -1,12 +1,14 @@
-import { View, Image } from "react-native";
+import { View, Image, ImageProps } from "react-native";
 import { styles } from "./styles";
 
+interface InfoStatusBarProps{
+  src: ImageProps
+}
 
-export const InfoStatusBar = () => {
+export const InfoStatusBar = ({src} : InfoStatusBarProps) => {
  return (
    <View style={styles.container}>
-     <Image style={styles.image} source={{ uri: 'https://avatars.githubusercontent.com/u/105431834?s=400&u=6d831a0e5c11cb6b341052a07ca94f71a31fe7bf&v=4' }} />
-     <View ></View>
+     <Image style={styles.image} source={src} />
 
    </View>
  );
