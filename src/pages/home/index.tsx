@@ -1,14 +1,13 @@
 import React from "react";
 import { HorizontasScrollView } from "../../components/horizontalScrollView";
 import { Categories } from "../categories";
-import { View } from "react-native";
-import { styles } from "./styles";
+import { SafeAreaView, View } from "react-native";
 
 export const Home = () => {
  return (
-   <View>
+   <SafeAreaView>
      <HorizontasScrollView/>
      <Categories/>
-   </View>
+   </SafeAreaView>
  );
 };

@@ -1,23 +1,31 @@
 import { StyleSheet } from "react-native";
+import { Dimensions } from "react-native";
+
+const screenWidth = Dimensions.get("window").width;
+const heightWidth = Dimensions.get("window").height;
 
 export const styles = StyleSheet.create({
     container: {
-        width: 100,
-        height: 100,
-        backgroundColor: 'red',
+        width: (screenWidth - (screenWidth/2)),
+        height: (heightWidth/6),
+        backgroundColor: '#BE8981',
         borderWidth: 1,
-        marginVertical: 3,
-        marginHorizontal: 5
+        borderRadius: 5,
+        marginVertical: 7,
+        marginHorizontal: 5,
+        alignItems:"center",
+        justifyContent: "center"
     },
-    containerRowCard: {
-        display: "flex",
-        justifyContent: "space-between",
-        flexDirection:'row',
-    },
+    
     title: {
         color: 'black',
-        fontSize: 20,
+        fontSize: 30,
         fontWeight: "bold",
-        textAlign: "center",
+        alignSelf: 'flex-start',
+        marginLeft:15,
       },
+      containerRowCard: {
+        display: "flex",
+        flexDirection:'row',
+    },
    });

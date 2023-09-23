@@ -1,11 +1,20 @@
-import { View } from "react-native";
+import { ScrollView } from "react-native";
 import {RowCardCategory} from '../../components/cardCategories';
+import {styles} from './styles';
 
 export const Categories=()=> {
     return (
 
-        <View>
+        <ScrollView style={styles.container}
+        showsVerticalScrollIndicator={false}>
             <RowCardCategory/>
-        </View>
+            <RowCardCategory/>
+            <RowCardCategory/>
+            <RowCardCategory/>
+            <RowCardCategory/>
+            <RowCardCategory/>
+            <RowCardCategory/>
+            <RowCardCategory/>
+        </ScrollView>
     );
 };
