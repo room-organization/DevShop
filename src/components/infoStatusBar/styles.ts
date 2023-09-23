@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
       marginHorizontal: 10,
       justifyContent: "center",
       alignItems: "center",
+      backgroundColor: '#CCCCCC'
       
     },
     image: {
