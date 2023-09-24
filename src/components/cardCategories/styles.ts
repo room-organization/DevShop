@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     container: {
         width: (screenWidth - (screenWidth/2)),
         height: (heightWidth/6),
-        backgroundColor: '#BE8981',
+        // backgroundColor: '#BE8981',
         borderWidth: 1,
         borderRadius: 5,
         marginVertical: 7,

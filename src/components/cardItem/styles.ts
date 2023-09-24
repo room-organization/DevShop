@@ -5,25 +5,31 @@ import theme from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
     container:{
-        width: RFValue(130),
+        backgroundColor: theme.colors1.backgroundProduct,
+        width: RFValue(200),
         borderWidth: 1,
         borderRadius: 5,
         padding: 5,
         
     },
     infoItem:{
-        backgroundColor: theme.colors.background,
         flexDirection: 'column'
     },
     icon:{
-        // backgroundColor: 'red',
-        alignSelf:'flex-end'
+        alignSelf:'flex-end',
     },
+    image:{
+        width: '100%',
+        height: 200,
+        resizeMode: 'contain',
+    },    
     title:{
+        color: theme.colors1.title,
         fontSize: 20,
         fontWeight: 'bold',
     },
     describe:{
+        color: theme.colors1.describe,
         fontSize: 13,
     },
     footer:{
