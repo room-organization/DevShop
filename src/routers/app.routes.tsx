@@ -8,8 +8,24 @@ const {Navigator, Screen} = createBottomTabNavigator();
 
 export function AppRoutes() {
     return(
-        <Navigator>
-            <Screen name="Inicio" component={Home}/>
+        <Navigator
+        screenOptions={
+            {
+                headerShown:false,
+                tabBarActiveBackgroundColor: '',
+                tabBarActiveTintColor:'',
+                tabBarInactiveBackgroundColor:'',
+                tabBarInactiveTintColor:'',
+                tabBarLabelPosition: "below-icon", //Posicao do icone (Lado do texto ou em cima)
+                tabBarStyle:{
+                    // height: 50,
+                }
+            }
+        }
+        >
+            <Screen 
+            name="Inicio" component={Home}
+            />
             <Screen name="Categoria" component={Categories}/>
             {/* <Screen name="Categoria" component={Categories}/> */}
         </Navigator>

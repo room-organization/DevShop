@@ -9,9 +9,7 @@ export const Home = () => {
  return (
    <SafeAreaView>
      <HorizontasScrollView/>
-     <Categories/>
      <CardItem/> 
-     <ItemDetail/>
    </SafeAreaView>
  );
 };
