@@ -3,7 +3,7 @@ export default {
         background: '#fbfbfb',
         button: '#3c5a5d',
         title: '#0c1415',
-        describe:' #707f81',
+        // describe:' #707f81',
         backgroundProduct:'#d2d2d2'
 
     },

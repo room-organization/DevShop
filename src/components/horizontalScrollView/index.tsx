@@ -1,6 +1,5 @@
-import { View, ScrollView } from "react-native";
+import {  ScrollView } from "react-native";
 import { styles } from "./styles";
-import { InfoStatusBar } from "../infoStatusBar";
 import { StatusBar } from "../statusBar";
 
 export const HorizontasScrollView= () =>{
