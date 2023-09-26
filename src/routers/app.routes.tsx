@@ -12,21 +12,34 @@ import { Categories } from "../pages/categories";
 import { ItemDetail } from "../pages/itemDetail";
 import { cart } from "../pages/cart";
 
+import { StackNavigationProp } from '@react-navigation/stack';
 
 
 // const {Navigator, Screen} = createBottomTabNavigator();
-const Stack = createStackNavigator();
+
 const Tab = createBottomTabNavigator();
 
-function StackNavigator() {
-    return(
-        <Stack.Navigator>
-            <Stack.Screen name="Inicio"  component={Home}/>
-            <Stack.Screen name="Categorias"  component={Categories}/>
-            <Stack.Screen name="Detalhes"  component={ItemDetail}/>
-        </Stack.Navigator>
-    );
+
+
+const Stack = createStackNavigator();
+
+export type RootStackParamList = {
+  Home: undefined;
+  Categories: undefined;
+  ItemDetail: undefined;
+};
+
+export function StackNavigator() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Categories" component={Categories} />
+      <Stack.Screen name="ItemDetail" component={ItemDetail} />
+    </Stack.Navigator>
+  );
 }
+
+
 
 function TabNavigator() {
     return (
