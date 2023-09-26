@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     describe:{
-        color: theme.colors1.describe,
+        color: theme.colors2.describe,
         fontSize: 13,
     },
     footer:{

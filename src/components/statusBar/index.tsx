@@ -4,10 +4,12 @@ import { InfoStatusBar } from "../infoStatusBar";
 
 
 const data = [
-  require('../../../assets/favicon.png'),
-  require('../../../assets/adaptive-icon.png'),
-  require('../../../assets/icon.png'),
-  require('../../../assets/splash.png'),
+  require('../../assets/images/T_Shirt.png'),
+  require('../../assets/images/Shoes_Adidas.png'),
+  require('../../assets/images/Shoes_Nike.png'),
+  require('../../assets/images/Camisola_Capuz.png'),
+  require('../../assets/images/Calcoes.png'),
+
 ]
 
 export const StatusBar = () => {
