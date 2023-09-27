@@ -15,8 +15,8 @@ export function TabRoutes(){
         screenOptions={
             {
                 headerShown:false,
-                tabBarActiveBackgroundColor: theme.colors1.button,
-                tabBarActiveTintColor:theme.colors2.buttonFocus,
+                tabBarActiveBackgroundColor: theme.colors_backgrounds.primary,
+                tabBarActiveTintColor:theme.colors_backgrounds.secondary,
                 tabBarInactiveBackgroundColor:'',
                 tabBarInactiveTintColor:'',
                 tabBarLabelPosition: "below-icon", //Posicao do icone (Lado do texto ou em cima)

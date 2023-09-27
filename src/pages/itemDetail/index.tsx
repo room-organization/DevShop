@@ -23,7 +23,7 @@ export const ItemDetail=()=> {
                <Button 
                 // onPress={() => this.addProductToCart(product)}
                 title="Adicionar ao carrinho"
-                color={theme.colors1.button}/>
+                color={theme.colors_backgrounds.secondary}/>
 
               </TouchableOpacity>
             </View>

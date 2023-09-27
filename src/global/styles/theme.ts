@@ -1,19 +1,20 @@
 export default {
-    colors1:{
-        background: '#fbfbfb',
-        button: '#3c5a5d',
-        title: '#0c1415',
-        // describe:' #707f81',
-        backgroundProduct:'#d2d2d2'
-
+    colors_backgrounds:{
+        primary: '#FFFFFF',
+        secondary:'#3C5A5D',
+        tabBar: '#0C1415',
+        cardItem: '#F6F6F6',
+        statusBarItem: '#F1F3F3',
+        searchBar:'#ECECECCC',
+        icons:'#FFFFFF'        
     },
-    colors2:{
-        background: '#f6f8fa',
-        button: '#bae4bf',
-        buttonFocus: '#61c566',
-        title: '#000000',
-        describe:' #9e9fa0',
-        backgroundProduct:'#ffffff'
+    colors_text:{
+        primary: '#000000',
+        secondary:'#3C5A5D',
+        itemName:'##796E6E',
+        price: '#000000',
+        text: '#899597',
+        white: '#FFFFFF',
     }
     
 }

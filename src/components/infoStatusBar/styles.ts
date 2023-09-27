@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import theme from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
     container: {
@@ -11,7 +12,7 @@ export const styles = StyleSheet.create({
       marginHorizontal: 10,
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: '#CCCCCC'
+      backgroundColor: theme.colors_backgrounds.statusBarItem
       
     },
     image: {

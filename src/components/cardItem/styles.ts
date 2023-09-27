@@ -1,13 +1,12 @@
-import {StyleSheet} from 'react-native'
-import { RFValue, RFPercentage } from 'react-native-responsive-fontsize';
+import {Dimensions, StyleSheet} from 'react-native'
+import {RFPercentage } from 'react-native-responsive-fontsize';
 import theme from '../../global/styles/theme';
 
-
+const width = Dimensions.get('screen').width;
 export const styles = StyleSheet.create({
     container:{
-        backgroundColor: theme.colors1.backgroundProduct,
-        width: RFValue(200),
-        borderWidth: 1,
+        backgroundColor: theme.colors_backgrounds.cardItem,
+        width: width/2,
         borderRadius: 5,
         padding: 5,
         
@@ -17,27 +16,25 @@ export const styles = StyleSheet.create({
     },
     icon:{
         alignSelf:'flex-end',
+        backgroundColor: theme.colors_backgrounds.icons,
+        width: 50,
+        height: 50,
+        borderRadius: 100 / 2,
+        justifyContent: "center",
+        alignItems: "center",
     },
     image:{
         width: '100%',
         height: 200,
         resizeMode: 'contain',
-    },    
+    },
+    
     title:{
-        color: theme.colors1.title,
-        fontSize: 20,
-        fontWeight: 'bold',
+        color: theme.colors_text.itemName
     },
-    describe:{
-        color: theme.colors2.describe,
-        fontSize: 13,
-    },
-    footer:{
-        flexDirection: 'row',
-        justifyContent: 'space-between'
-    },
+
     price:{
-        fontWeight: 'bold'
+        color: theme.colors_text.price
     },
 
 
