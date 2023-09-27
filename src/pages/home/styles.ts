@@ -30,8 +30,8 @@ export const styles = StyleSheet.create({
     },
 
     scrollView:{
-        // height: height- RFPercentage(20),
-        borderWidth: 1,
+       height: height- RFPercentage(20),
+        marginTop: 8,
 
     }
 });

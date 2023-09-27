@@ -15,7 +15,7 @@ export const Home = () => {
      </View>
      <HorizontasScrollView/>
      
-     {/* <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollView}>
+     <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollView}>
         <RowCard/>
         <RowCard/>
         <RowCard/>
@@ -28,7 +28,7 @@ export const Home = () => {
         <RowCard/>
         <RowCard/>
       
-     </ScrollView> */}
+     </ScrollView>
    </SafeAreaView>
  );
 };
