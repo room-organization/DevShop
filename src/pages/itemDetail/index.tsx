@@ -19,7 +19,7 @@ export const ItemDetail = () => {
         />
       </View>
 
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.details}>
           <Text style={styles.title}>Camiseta 1</Text>
           <Text style={styles.label}>Product details</Text>

@@ -33,5 +33,7 @@ export const styles = StyleSheet.create({
        height: height- RFPercentage(20),
         marginTop: 8,
 
+    }, hero:{
+        
     }
 });

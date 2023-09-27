@@ -1,9 +1,10 @@
 import { HorizontasScrollView } from "../../components/horizontalScrollView";
-import { Button, Image, SafeAreaView, ScrollView, Text, View } from "react-native";
-import { CardItem, RowCard } from "../../components/cardItem";
+import {  SafeAreaView, ScrollView, Text, View } from "react-native";
+import { RowCard } from "../../components/cardItem";
 import { SearchSection } from "../../components/searchSection";
 import { styles } from "./styles";
 import theme from "../../global/styles/theme";
+import { Hero } from "../../components/hero";
 
 export const Home = () => {
  return (
@@ -14,7 +15,7 @@ export const Home = () => {
       <Text style={styles.more}>See All</Text>
      </View>
      <HorizontasScrollView/>
-     
+     <Hero/>
      <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollView}>
         <RowCard/>
         <RowCard/>
