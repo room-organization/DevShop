@@ -1,8 +1,9 @@
 import { HorizontasScrollView } from "../../components/horizontalScrollView";
-import { SafeAreaView, Text, View } from "react-native";
-import { CardItem } from "../../components/cardItem";
+import { Button, Image, SafeAreaView, ScrollView, Text, View } from "react-native";
+import { CardItem, RowCard } from "../../components/cardItem";
 import { SearchSection } from "../../components/searchSection";
 import { styles } from "./styles";
+import theme from "../../global/styles/theme";
 
 export const Home = () => {
  return (
@@ -13,7 +14,21 @@ export const Home = () => {
       <Text style={styles.more}>See All</Text>
      </View>
      <HorizontasScrollView/>
-     <CardItem/> 
+     
+     {/* <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollView}>
+        <RowCard/>
+        <RowCard/>
+        <RowCard/>
+        <RowCard/>
+        <RowCard/>
+        <RowCard/>
+        <RowCard/>
+        <RowCard/>
+        <RowCard/>
+        <RowCard/>
+        <RowCard/>
+      
+     </ScrollView> */}
    </SafeAreaView>
  );
 };

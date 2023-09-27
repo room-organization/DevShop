@@ -1,4 +1,4 @@
-import { View, Image, ImageProps, TouchableOpacity } from "react-native";
+import { View, Image, ImageProps, TouchableOpacity, Text } from "react-native";
 import { styles } from "./styles";
 import { RootStackParamList } from "../../routers/app.routes";
 import { useNavigation } from "@react-navigation/native";
@@ -22,8 +22,8 @@ export const InfoStatusBar = ({src,} : InfoStatusBarProps) => {
   <TouchableOpacity onPress={openItemDetail}>
     <View style={styles.container}>
       <Image style={styles.image} source={src} />
-
     </View>
+    <Text style={styles.category}>Category</Text>
    </TouchableOpacity>
  );
 };
