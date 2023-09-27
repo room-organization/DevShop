@@ -1,15 +1,17 @@
 import 'react-native-gesture-handler';
-import {NavigationContainer} from '@react-navigation/native';
 
 import { Routers } from './src/routers';
-import { StackRouters } from './src/routers/stack.routes';
-import { Home } from './src/pages/home';
 import AppRoutes from './src/routers/app.routes';
 
+// import {}from '@ex';
+
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    
+  });
+  
   return (
     // <Routers/>
-    // <Home/>
     <AppRoutes/>
   );
 }
