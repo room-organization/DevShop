@@ -6,9 +6,10 @@ const width = Dimensions.get('screen').width;
 export const styles = StyleSheet.create({
     container:{
         backgroundColor: theme.colors_backgrounds.cardItem,
-        width: width/2,
+        width: (width/2)- 20,
         borderRadius: 5,
         padding: 5,
+        margin: 10,
         
     },
     infoItem:{
@@ -36,6 +37,9 @@ export const styles = StyleSheet.create({
     price:{
         color: theme.colors_text.price
     },
+    rowCard:{
+        flexDirection: 'row'
+    }
 
 
 });

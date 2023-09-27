@@ -1,16 +1,15 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
+import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 
+const height = Dimensions.get('screen').height;
 export const styles = StyleSheet.create({
     container:{
-        maxHeight: 100,
-        paddingVertical: 5,
-        // backgroundColor: 'red'
+        // height: 30,
+        // paddingVertical: 15,
+        // marginBottom: 10,
+    backgroundColor: 'red',
+    // height: (height/2) - RFPercentage(37), 
 
     },
 
-    contentContainer: {
-        justifyContent: "center",
-        alignItems: "center",
-        
-      },
 });

@@ -16,3 +16,11 @@ export function CardItem() {
 
     )
 };
+export function RowCard() {
+    return(
+        <View style={styles.rowCard}>
+            <CardItem/>
+            <CardItem/>
+        </View>
+    )
+}

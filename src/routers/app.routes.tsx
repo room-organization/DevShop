@@ -29,10 +29,10 @@ export type RootStackParamList = {
   ItemDetail: undefined;
 };
 
-export function StackNavigator() {
+function StackNavigator() {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Home" component={Home} />
+    <Stack.Navigator >
+      <Stack.Screen name="Home"  component={Home} />
       <Stack.Screen name="Categories" component={Categories} />
       <Stack.Screen name="ItemDetail" component={ItemDetail} />
     </Stack.Navigator>
@@ -69,7 +69,7 @@ function TabNavigator() {
                     ),
                 }
             }/>
-            <Tab.Screen name="Categoria" component={Categories}
+            <Tab.Screen name="Categoria" component={Categories} 
             options={
                 {
                     tabBarIcon: (({size, color}) => 
