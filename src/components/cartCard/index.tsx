@@ -9,7 +9,9 @@ export function CartCard(props) {
   return (
     <View  style={styles.card}>
       <View row style={{flexDirection: 'row',}} >
-        <View style={styles.image} />
+        <View style={styles.image}>
+          <Image source={require('../../assets/images/T_Shirt.png')} style={{width: '100%', height: undefined, aspectRatio: 1,}}/>
+        </View>
         <View style={{flexDirection: 'row',width: '70%',alignItems: 'center',justifyContent: 'space-between'}}> 
             <View style={[styles.titleSection, {flexGrow: 1,}]}>
               <Text title3>Room SB</Text>

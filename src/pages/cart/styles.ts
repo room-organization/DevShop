@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
     },
     content: {
         marginHorizontal: 29,
-        // paddingBottom: 32,
+        paddingHorizontal: 10,
         borderRadius: 10,
         backgroundColor: theme.colors_backgrounds.primary,
 

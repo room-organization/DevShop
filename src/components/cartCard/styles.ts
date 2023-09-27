@@ -11,8 +11,11 @@ export const styles = StyleSheet.create({
   image: {
     width: '30%', //124
     height: 101,
-    borderRadius: 20,
-    backgroundColor: 'gray',
+    borderRadius: 15,
+    // backgroundColor: 'gray',
+    borderWidth: 1,
+    borderColor: theme.colors_backgrounds.secondary,
+    padding: 2,
   },
   titleSection:{
     marginLeft: 16,
