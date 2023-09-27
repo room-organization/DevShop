@@ -1,14 +1,21 @@
 import { View, Image, ImageProps, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
+import { RootStackParamList } from "../../routers/app.routes";
+import { useNavigation } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
 
-interface InfoStatusBarProps{
-  src: ImageProps
+interface InfoStatusBarProps {
+  src: ImageProps;
 }
 
-export const InfoStatusBar = ({src} : InfoStatusBarProps, {navigation}) => {
+type ItemDetailScreenProp = StackNavigationProp<RootStackParamList, 'ItemDetail'>;
+
+export const InfoStatusBar = ({src,} : InfoStatusBarProps) => {
   
+  const navigation = useNavigation<ItemDetailScreenProp>()
+
   function openItemDetail() {
-    navigation.navigate('detail')
+    navigation.navigate('ItemDetail');
   }
 
   return (
