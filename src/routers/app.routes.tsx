@@ -31,7 +31,9 @@ export type RootStackParamList = {
 
 function StackNavigator() {
   return (
-    <Stack.Navigator >
+    <Stack.Navigator screenOptions={{
+      headerShown:false
+    }}>
       <Stack.Screen name="Home"  component={Home} />
       <Stack.Screen name="Categories" component={Categories} />
       <Stack.Screen name="ItemDetail" component={ItemDetail} />

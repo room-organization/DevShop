@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
         // height: 30,
         // paddingVertical: 15,
         // marginBottom: 10,
-    backgroundColor: 'red',
+    //backgroundColor: 'red',
     // height: (height/2) - RFPercentage(37), 
 
     },

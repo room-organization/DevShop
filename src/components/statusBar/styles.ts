@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         paddingVertical: 3,
-        backgroundColor: 'blue',
-        height: (height/2) - RFPercentage(37), 
+        //backgroundColor: 'blue',
+        height: 120, 
     }
    });
