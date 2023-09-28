@@ -1,20 +1,34 @@
-import { ScrollView } from "react-native";
-import {RowCardCategory} from '../../components/cardCategories';
+import { ScrollView, View } from "react-native";
+import {CategoryItem} from '../../components/categoryItem';
 import {styles} from './styles';
+import {Header} from '../../components/header/';
 
 export const Categories=()=> {
     return (
 
         <ScrollView style={styles.container}
         showsVerticalScrollIndicator={false}>
-            <RowCardCategory/>
-            <RowCardCategory/>
-            <RowCardCategory/>
-            <RowCardCategory/>
-            <RowCardCategory/>
-            <RowCardCategory/>
-            <RowCardCategory/>
-            <RowCardCategory/>
+            <Header title="Category" />
+
+            <View style={styles.items}>
+
+                <CategoryItem/>
+                <CategoryItem/>
+                <CategoryItem/>
+                <CategoryItem/>
+                <CategoryItem/>
+                <CategoryItem/>
+                <CategoryItem/>
+                <CategoryItem/>
+                <CategoryItem/>
+                <CategoryItem/>
+                <CategoryItem/>
+                <CategoryItem/>
+                <CategoryItem/>
+                <CategoryItem/>
+                <CategoryItem/>
+                <CategoryItem/>
+            </View>
         </ScrollView>
     );
 };
