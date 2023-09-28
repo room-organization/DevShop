@@ -5,18 +5,18 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../../routers/app.routes';
 import { useNavigation } from '@react-navigation/native';
 
-type CardItemDetailScreenProp = StackNavigationProp<RootStackParamList, 'ItemDetail'>;
+type CardProductScreenProp = StackNavigationProp<RootStackParamList, 'Product'>;
 
 
 
 export function CardItem() {
-    const navigation = useNavigation<CardItemDetailScreenProp>()
+    const navigation = useNavigation<CardProductScreenProp>()
 
-    function openItemDetail() {
-        navigation.navigate('ItemDetail');
+    function openProduct() {
+        navigation.navigate('Product');
     }
     return(
-        <TouchableOpacity style={styles.container} onPress={openItemDetail}>
+        <TouchableOpacity style={styles.container} onPress={openProduct}>
             <View style={styles.icon}>
                 <Feather name='heart'  size={30}/>
             </View>

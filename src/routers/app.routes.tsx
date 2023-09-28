@@ -7,10 +7,17 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {MaterialIcons, Feather} from '@expo/vector-icons';
 
 import theme from "../global/styles/theme";
-import { Home } from "../pages/home";
+
+import { Cart } from "../pages/cart";
 import { Categories } from "../pages/categories";
-import { ItemDetail } from "../pages/itemDetail";
-import { cart } from "../pages/cart";
+import { CategoryItems } from '../pages/categoryItems';
+import { Favorites } from '../pages/favorites';
+import { Home } from "../pages/home";
+import { Offer } from '../pages/offer';
+import { Payments} from '../pages/payments';
+import { Product } from "../pages/product";
+import { User} from '../pages/user';
+
 
 import { StackNavigationProp } from '@react-navigation/stack';
 
@@ -24,9 +31,15 @@ const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
 export type RootStackParamList = {
-  Home: undefined;
+  Cart: undefined;
   Categories: undefined;
-  ItemDetail: undefined;
+  CategoryItems: undefined;
+  Favorites: undefined;
+  Home: undefined;
+  Offer: undefined;
+  Payments: undefined;
+  Product: undefined;
+  User: undefined;
 };
 
 function StackNavigator() {
@@ -34,9 +47,16 @@ function StackNavigator() {
     <Stack.Navigator screenOptions={{
       headerShown:false
     }}>
-      <Stack.Screen name="Home"  component={Home} />
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Cart"  component={Cart} />
       <Stack.Screen name="Categories" component={Categories} />
-      <Stack.Screen name="ItemDetail" component={ItemDetail} />
+      <Stack.Screen name="CategoryItems" component={CategoryItems} />
+      <Stack.Screen name="Favorites"  component={Favorites} />
+      <Stack.Screen name="Offer" component={Offer} />
+      <Stack.Screen name="Payments" component={Payments} />
+      <Stack.Screen name="Product" component={Product} />
+      <Stack.Screen name="User" component={User} />
+      
     </Stack.Navigator>
   );
 }
@@ -82,11 +102,33 @@ function TabNavigator() {
                 }
             }
             />
-            <Tab.Screen name="Carinho" component={cart}
+            <Tab.Screen name="Carinho" component={Cart}
             options={
                 {
                     tabBarIcon: (({size, color}) => 
                     <Feather name="shopping-cart" 
+                    color={color}
+                    size={size}/> //Cor e tamanho dinamico para mudar de acordo com a selcao do meno
+                    ),
+                }
+            }
+            />
+            <Tab.Screen name="Offer" component={Offer}
+            options={
+                {
+                    tabBarIcon: (({size, color}) => 
+                    <Feather name="tag" 
+                    color={color}
+                    size={size}/> //Cor e tamanho dinamico para mudar de acordo com a selcao do meno
+                    ),
+                }
+            }
+            />
+            <Tab.Screen name="Account" component={User}
+            options={
+                {
+                    tabBarIcon: (({size, color}) => 
+                    <Feather name="user" 
                     color={color}
                     size={size}/> //Cor e tamanho dinamico para mudar de acordo com a selcao do meno
                     ),
