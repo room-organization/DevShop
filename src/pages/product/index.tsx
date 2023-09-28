@@ -5,7 +5,7 @@ import { styles } from "./styles";
 import theme from "../../global/styles/theme";
 import { ScrollView } from "react-native-gesture-handler";
 
-export const ItemDetail = () => {
+export const Product = () => {
   return (
     <View style={styles.container}>
       <View style={styles.showcase}>

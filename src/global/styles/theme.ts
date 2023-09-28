@@ -1,13 +1,14 @@
 export default {
     colors_backgrounds:{
-        primary: '#FFFFFF',
+        primary: '#F8F0F0',
         secondary:'#3C5A5D',
         tabBar: '#0C1415',
         cardItem: '#F6F6F6',
         statusBarItem: '#F1F3F3',
         searchBar:'#ECECECCC',
         icons:'#FFFFFF',
-        hero: '#D9D9D9CC'        
+        hero: '#D9D9D9CC',
+        btnGreen: '#3C5A5D'        
     },
     colors_text:{
         primary: '#000000',

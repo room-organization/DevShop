@@ -7,7 +7,7 @@ import { Header } from '../../components/header';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import theme from '../../global/styles/theme';
 
-export function cart() {
+export function Cart() {
 
   return (
       <View style={styles.container}>
