@@ -7,19 +7,12 @@ const heightWidth = Dimensions.get("window").height;
 
 export const styles = StyleSheet.create({
     container: {
-        flexDirection: 'column',
+        padding: 20,
+        flexDirection: 'row',
         alignItems: 'center',
-        width: 90,
+        gap: 20,
     },
     icon: {
-        backgroundColor: 'lightgray', 
-        width: 60,
-        height: 60,
-        borderRadius: 60,
-        marginVertical: 7,
-        marginHorizontal: 5,
-        alignItems:"center",
-        justifyContent: "center"
     },
     
    });
