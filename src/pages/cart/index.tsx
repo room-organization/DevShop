@@ -13,7 +13,7 @@ export function Cart() {
       <View style={styles.container}>
         {/* Top Section */}
         <SafeAreaView style={{backgroundColor: theme.colors_backgrounds.statusBarItem,}}>
-          <Header />
+          <Header title="My Cart" />
           {/* Cart Items */}
           <ScrollView style={styles.content}>
             <CartCard />
