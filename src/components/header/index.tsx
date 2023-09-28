@@ -12,7 +12,7 @@ type HomeProductScreenProp = StackNavigationProp<RootStackParamList, 'Home'>;
 
 
 
-export function Header() {
+export function Header(props) {
 
     const navigation = useNavigation<HomeProductScreenProp>()
 
@@ -23,7 +23,7 @@ export function Header() {
     return(
         <View style={styles.container}>
             <Ionicons name="arrow-back" size={24} color="black" onPress={openHome}/>
-            <Text style={{ flex: 1, textAlign: 'center' }}>My Cart</Text>
+            <Text style={{ flex: 1, textAlign: 'center' }}>{props.title}</Text>
         </View>
 
     )
