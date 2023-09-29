@@ -12,7 +12,7 @@ export const Home = () => {
     <View style={styles.center}>
       <SearchSection/>
     </View>
-      <ScrollView style={[styles.container, styles.center]}>
+      <ScrollView style={[styles.container, styles.center]} showsVerticalScrollIndicator={false}>
       
         <View style={styles.row}>
           <Text style={styles.category}>Category</Text>
@@ -25,14 +25,7 @@ export const Home = () => {
             <RowCard/>
             <RowCard/>
             <RowCard/>
-            <RowCard/>
-            <RowCard/>
-            <RowCard/>
-            <RowCard/>
-            <RowCard/>
-            <RowCard/>
-            <RowCard/>
-          
+            
         </View>
       
       

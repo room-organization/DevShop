@@ -7,10 +7,8 @@ const height = Dimensions.get('screen').height;
 
 export const styles = StyleSheet.create({
     hero:{
-        // marginLeft: RFValue(6),
-        height:(height/7) ,
+        height:(height/5) ,
         marginTop: 10,
-
     },
     imageBackground:{
         flex: 1,
@@ -24,7 +22,7 @@ export const styles = StyleSheet.create({
     elipseGroup:{
         flexDirection:'row',
         justifyContent: "center",
-        borderWidth: 1
+        marginVertical: 10
     },
     elipse:{
         backgroundColor: theme.colors_backgrounds.btnGreen,

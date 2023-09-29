@@ -1,8 +1,6 @@
 import { View, Image, ImageProps, TouchableOpacity, Text } from "react-native";
 import { styles } from "./styles";
-import { RootStackParamList } from "../../routers/app.routes";
 import { useNavigation } from "@react-navigation/native";
-import { StackNavigationProp } from "@react-navigation/stack";
 import {ProductScreenProp} from '../../routers/type.routes'
 interface InfoStatusBarProps {
   src: ImageProps;

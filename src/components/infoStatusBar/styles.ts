@@ -4,18 +4,17 @@ import { RFValue } from "react-native-responsive-fontsize";
 
 export const styles = StyleSheet.create({
     container: {
-      width: 80,
-      height:80,
+      width: 55,
+      height:55,
       borderRadius: 50 ,
-      borderColor: "#848484",
       marginHorizontal: 10,
       justifyContent: "center",
       alignItems: "center",
       backgroundColor: theme.colors_backgrounds.statusBarItem
     },
     image: {
-      width: 70,
-      height: 70,
+      width: 50,
+      height: 50,
       borderRadius: 50,
     },
     category:{

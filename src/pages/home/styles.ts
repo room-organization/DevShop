@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
         backgroundColor: theme.colors_backgrounds.primary,
     },
     center:{
-        marginHorizontal: 40
+        marginHorizontal: 20
     },
     row: {
         flexDirection: "row",
@@ -32,9 +32,8 @@ export const styles = StyleSheet.create({
 
     scrollView:{
        height: height- RFPercentage(20),
-        marginTop: 8,
-
-    }, hero:{
+    }
+    , hero:{
         
     }
 });
