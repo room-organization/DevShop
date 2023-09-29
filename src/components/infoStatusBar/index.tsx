@@ -8,18 +8,18 @@ interface InfoStatusBarProps {
   src: ImageProps;
 }
 
-type ItemDetailScreenProp = StackNavigationProp<RootStackParamList, 'ItemDetail'>;
+type ProductScreenProp = StackNavigationProp<RootStackParamList, 'Product'>;
 
 export const InfoStatusBar = ({src,} : InfoStatusBarProps) => {
   
-  const navigation = useNavigation<ItemDetailScreenProp>()
+  const navigation = useNavigation<ProductScreenProp>()
 
-  function openItemDetail() {
-    navigation.navigate('ItemDetail');
+  function openProduct() {
+    navigation.navigate('Product');
   }
 
   return (
-  <TouchableOpacity onPress={openItemDetail}>
+  <TouchableOpacity onPress={openProduct}>
     <View style={styles.container}>
       <Image style={styles.image} source={src} />
     </View>

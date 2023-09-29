@@ -10,26 +10,30 @@ export const Home = () => {
  return (
    <SafeAreaView style={styles.container}>
      <SearchSection/>
-     <View style={styles.row}>
-      <Text style={styles.category}>Category</Text>
-      <Text style={styles.more}>See All</Text>
-     </View>
-     <HorizontasScrollView/>
-     <Hero/>
-     <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollView}>
-        <RowCard/>
-        <RowCard/>
-        <RowCard/>
-        <RowCard/>
-        <RowCard/>
-        <RowCard/>
-        <RowCard/>
-        <RowCard/>
-        <RowCard/>
-        <RowCard/>
-        <RowCard/>
-      
+     
+     <ScrollView>
+      <View style={styles.row}>
+        <Text style={styles.category}>Category</Text>
+        <Text style={styles.more}>See All</Text>
+      </View>
+      <HorizontasScrollView/>
+      <Hero/>
+      <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollView}>
+          <RowCard/>
+          <RowCard/>
+          <RowCard/>
+          <RowCard/>
+          <RowCard/>
+          <RowCard/>
+          <RowCard/>
+          <RowCard/>
+          <RowCard/>
+          <RowCard/>
+          <RowCard/>
+        
+      </ScrollView>
      </ScrollView>
+     
    </SafeAreaView>
  );
 };
