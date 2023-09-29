@@ -1,9 +1,15 @@
-import React from 'react';
-import { View, Text, Image, ImageBackground } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Image, ImageBackground, TouchableOpacity } from 'react-native';
 
 import { styles } from './styles';
 
 export function Hero() {
+  const [activeElipse, setActiveElipse] = useState(0);
+
+  const handleElipsePress = (index) => {
+    setActiveElipse(index);
+  };
+
   return (
     <View style={styles.hero}>
       <ImageBackground
@@ -11,6 +17,16 @@ export function Hero() {
         style={styles.imageBackground}>
           <Text style={styles.text}>Explore nossos produtos</Text>
         </ImageBackground>
+
+        <View style={styles.elipseGroup}>
+          {Array(5).fill(0).map((_, index) => (
+            <TouchableOpacity
+              key={index}
+              onPress={() => handleElipsePress(index)}
+              style={ index === activeElipse ? styles.elipse : styles.elipseOff}>
+            </TouchableOpacity>
+          ))}
+        </View>
      </View>
   );
 }

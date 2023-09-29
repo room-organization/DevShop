@@ -11,7 +11,7 @@ export function SearchSection() {
     <View style={styles.container}>
         <View style={styles.searchBar}>
             <FontAwesome name='search' size={RFValue(20)} style={styles.iconSearch}/>
-            <TextInput placeholder='Search' />
+            <TextInput placeholder='Search Product' style={styles.placeholder}/>
         </View>
         <View style={styles.iconContainer}>
             <Feather name='menu' size={RFValue(25)} style={styles.iconMenu}/>

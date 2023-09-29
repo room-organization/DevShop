@@ -7,19 +7,37 @@ const height = Dimensions.get('screen').height;
 
 export const styles = StyleSheet.create({
     hero:{
-        marginLeft: RFValue(6),
-        width: width - RFPercentage(2),
-        height:(height/9) ,
+        height:(height/5) ,
         marginTop: 10,
-
     },
     imageBackground:{
         flex: 1,
         resizeMode: 'cover',
+        justifyContent: "center"
     },
     text:{
         textAlign:"center",
-        textAlignVertical: 'center',
+        fontWeight: "bold"
+    },
+    elipseGroup:{
+        flexDirection:'row',
+        justifyContent: "center",
+        marginVertical: 10
+    },
+    elipse:{
+        backgroundColor: theme.colors_backgrounds.btnGreen,
+        width: 15,
+        height: 15,
+        borderRadius: 10,
+        marginHorizontal: 5
+    },
+    elipseOff:{
+        backgroundColor: theme.colors_backgrounds.elipseHero,
+        width: 15,
+        height: 15,
+        borderRadius: 10,
+        marginHorizontal: 5
+
     }
 
 });

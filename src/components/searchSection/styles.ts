@@ -6,37 +6,42 @@ const width = Dimensions.get('screen').width;
 const height = Dimensions.get('screen').height;
 export const styles = StyleSheet.create({
     container:{
+        backgroundColor: theme.colors_backgrounds.primary,
         height: RFPercentage(6),
-        Width: RFPercentage(50),
         flexDirection: "row",
         justifyContent: "space-between",
-        marginHorizontal:12,
         alignItems:'center',
         marginVertical: 10,
+        padding: 15
     },
     searchBar:{
-        backgroundColor: theme.colors_backgrounds.searchBar,
-        width: RFPercentage(35),
+        backgroundColor: theme.colors_backgrounds.primary,
         height: RFPercentage(5),
         borderRadius: 10,
-        paddingHorizontal: 5,
         flexDirection: "row",
         justifyContent: "center",
-        alignItems:"center"
+        alignItems:"center",
+        borderWidth: 1,
+        borderColor: theme.colors_backgrounds.lightBlue
     },
     iconSearch:{
-        
+        marginHorizontal: 10,
+        color: theme.colors_backgrounds.icons    
+
     },
     iconContainer:{
         backgroundColor:theme.colors_backgrounds.secondary,
         borderRadius: 10,
-        width: RFPercentage(5),
         height: RFPercentage(5),
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        padding: 10
     },
     iconMenu:{
-        color: theme.colors_backgrounds.icons    
+        color: theme.colors_backgrounds.primary    
+    },
+    placeholder:{
+        color: theme.colors_text.secondary
     }
 
 
