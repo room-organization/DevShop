@@ -5,6 +5,7 @@ import { SearchSection } from "../../components/searchSection";
 import { styles } from "./styles";
 import theme from "../../global/styles/theme";
 import { Hero } from "../../components/hero";
+import { RowCategory } from "../../components/rowCategories";
 
 export const Home = () => {
  return (
@@ -20,23 +21,8 @@ export const Home = () => {
         </View>
         <HorizontasScrollView/>
         <Hero/>
-        <View style={styles.rowCategories}>
-            <TouchableOpacity style={styles.itemRowCategory}>
-              <Text>All</Text>
-            </TouchableOpacity >
-
-            <TouchableOpacity style={styles.itemRowCategory}>
-              <Text>Newest</Text>
-            </TouchableOpacity>
-            
-            <TouchableOpacity style={styles.itemRowCategory}>
-              <Text>Popular</Text>
-            </TouchableOpacity>
-            
-            <TouchableOpacity style={styles.itemRowCategory}>
-              <Text>Dev</Text>
-            </TouchableOpacity>
-        </View>
+        
+        <RowCategory/>
         <View  style={styles.itens}>
             <RowCard/>
             <RowCard/>
