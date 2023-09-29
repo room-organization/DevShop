@@ -7,10 +7,11 @@ const height = Dimensions.get('screen').height;
 
 export const styles = StyleSheet.create({
     container:{
-        // width: width - RFPercentage(2),
-        // marginHorizontal : 10 ,
         height: height,
-        backgroundColor: theme.colors_backgrounds.primary
+        backgroundColor: theme.colors_backgrounds.primary,
+    },
+    center:{
+        marginHorizontal: 40
     },
     row: {
         flexDirection: "row",

@@ -8,32 +8,35 @@ import { Hero } from "../../components/hero";
 
 export const Home = () => {
  return (
-   <SafeAreaView style={styles.container}>
-     <SearchSection/>
-     
-     <ScrollView>
-      <View style={styles.row}>
-        <Text style={styles.category}>Category</Text>
-        <Text style={styles.more}>See All</Text>
-      </View>
-      <HorizontasScrollView/>
-      <Hero/>
-      <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollView}>
-          <RowCard/>
-          <RowCard/>
-          <RowCard/>
-          <RowCard/>
-          <RowCard/>
-          <RowCard/>
-          <RowCard/>
-          <RowCard/>
-          <RowCard/>
-          <RowCard/>
-          <RowCard/>
-        
-      </ScrollView>
+   <SafeAreaView >
+    <View style={styles.center}>
+      <SearchSection/>
+    </View>
+      <ScrollView style={[styles.container, styles.center]}>
+      
+        <View style={styles.row}>
+          <Text style={styles.category}>Category</Text>
+          <Text style={styles.more} >See All</Text>
+        </View>
+        <HorizontasScrollView/>
+        <Hero/>
+        <View  style={styles.scrollView}>
+            <RowCard/>
+            <RowCard/>
+            <RowCard/>
+            <RowCard/>
+            <RowCard/>
+            <RowCard/>
+            <RowCard/>
+            <RowCard/>
+            <RowCard/>
+            <RowCard/>
+            <RowCard/>
+          
+        </View>
+      
+      
      </ScrollView>
-     
    </SafeAreaView>
  );
 };
