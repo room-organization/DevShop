@@ -5,12 +5,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { useNavigation } from '@react-navigation/native';
 import { RootStackParamList } from '../../routers/app.routes';
 import { StackNavigationProp } from '@react-navigation/stack';
-
-type HomeProductScreenProp = StackNavigationProp<RootStackParamList, 'Home'>;
-
-
-
-
+import { HomeProductScreenProp } from '../../routers/type.routes';
 
 export function Header(props) {
 
