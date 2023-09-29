@@ -4,7 +4,7 @@ import {NavigationContainer} from '@react-navigation/native'
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import {MaterialIcons, Feather} from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
 
 import theme from "../global/styles/theme";
 
@@ -69,13 +69,18 @@ function TabNavigator() {
       screenOptions={
         {
             headerShown:false,
-            // tabBarActiveBackgroundColor: theme.colors1.button,
-            // tabBarActiveTintColor:theme.colors2.buttonFocus,
+            // tabBarActiveBackgroundColor: '',
+            tabBarActiveTintColor:theme.colors_backgrounds.secondary,
             tabBarInactiveBackgroundColor:'',
-            tabBarInactiveTintColor:'',
+            tabBarInactiveTintColor:theme.colors_backgrounds.icons,
             tabBarLabelPosition: "below-icon", //Posicao do icone (Lado do texto ou em cima)
             tabBarStyle:{
-                // height: 50,
+                height: 60,
+            },
+            tabBarLabelStyle:{
+                marginTop: -8,
+                marginBottom: 10
+
             }
         }
     }
@@ -85,30 +90,30 @@ function TabNavigator() {
             options={
                 {
                     tabBarIcon: (({size, color}) => 
-                    <MaterialIcons name="home" 
+                    <Feather name="home" 
                     color={color}
-                    size={size}/> //Cor e tamanho dinamico para mudar de acordo com a selcao do meno
+                    size={size}/> 
                     ),
                 }
             }/>
-            <Tab.Screen name="Categoria" component={Categories} 
+            <Tab.Screen name="Explore" component={Categories} 
             options={
                 {
                     tabBarIcon: (({size, color}) => 
-                    <MaterialIcons name="menu" 
+                    <Feather name="search" 
                     color={color}
-                    size={size}/> //Cor e tamanho dinamico para mudar de acordo com a selcao do meno
+                    size={size}/> 
                     ),
                 }
             }
             />
-            <Tab.Screen name="Carinho" component={Cart}
+            <Tab.Screen name="Cart" component={Cart}
             options={
                 {
                     tabBarIcon: (({size, color}) => 
                     <Feather name="shopping-cart" 
                     color={color}
-                    size={size}/> //Cor e tamanho dinamico para mudar de acordo com a selcao do meno
+                    size={size}/> 
                     ),
                 }
             }
@@ -119,7 +124,7 @@ function TabNavigator() {
                     tabBarIcon: (({size, color}) => 
                     <Feather name="tag" 
                     color={color}
-                    size={size}/> //Cor e tamanho dinamico para mudar de acordo com a selcao do meno
+                    size={size}/> 
                     ),
                 }
             }
@@ -130,7 +135,7 @@ function TabNavigator() {
                     tabBarIcon: (({size, color}) => 
                     <Feather name="user" 
                     color={color}
-                    size={size}/> //Cor e tamanho dinamico para mudar de acordo com a selcao do meno
+                    size={size}/> 
                     ),
                 }
             }
