@@ -3,7 +3,6 @@ export default {
         primary: '#FFFFFF',
         secondary:'#3C5A5D',
         tabBar: '#0C1415',
-        cardItem: '#F6F6F6',
         statusBarItem: '#F1F3F3',
         icons:'#9098B1',
         elipseHero: '#D9D9D9CC',

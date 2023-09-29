@@ -29,9 +29,23 @@ export const styles = StyleSheet.create({
         fontWeight: "700",
         fontSize: 8
     },
+    rowCategories:{
+        flexDirection: "row",
+        justifyContent: "space-evenly",
+        marginVertical: 10
 
-    scrollView:{
-       height: height- RFPercentage(20),
+    },
+    itemRowCategory:{
+        backgroundColor: theme.colors_backgrounds.secondary,
+        // width: 89,
+        height: 30,
+        borderRadius: 16,
+        padding: 10,
+        justifyContent: "center",
+        paddingHorizontal: 15
+    },
+    itens:{
+    //    height: height- RFPercentage(20),
     }
     , hero:{
         
