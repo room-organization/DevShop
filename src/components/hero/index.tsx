@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, Image, ImageBackground, TouchableOpacity } from 'react-native';
 
 import { styles } from './styles';
@@ -9,6 +9,17 @@ export function Hero() {
   const handleElipsePress = (index) => {
     setActiveElipse(index);
   };
+
+  useEffect(() => {
+    // Iniciar um temporizador que irá trocar as imagens a cada X segundos
+    const timer = setInterval(() => {
+      setActiveElipse((activeElipse + 1) % data.length);
+    }, 2000);
+
+    // Destruir o temporizador quando o componente for desmontado
+    return () => clearInterval(timer);
+  }, []);
+
   const data = [
     require('../../assets/images/hero.jpeg'),
     require('../../assets/images/Shoes_Adidas.png'),
