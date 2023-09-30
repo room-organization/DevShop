@@ -1,11 +1,10 @@
 import { HorizontasScrollView } from "../../components/horizontalScrollView";
-import {  SafeAreaView, ScrollView, Text, View, TouchableOpacity } from "react-native";
-import { RowCard } from "../../components/cardItem";
+import {  SafeAreaView, ScrollView, Text, View } from "react-native";
 import { SearchSection } from "../../components/searchSection";
 import { styles } from "./styles";
-import theme from "../../global/styles/theme";
 import { Hero } from "../../components/hero";
 import { RowCategory } from "../../components/rowCategories";
+import { ProductList } from "../../components/ProductList";
 
 export const Home = () => {
  return (
@@ -24,10 +23,7 @@ export const Home = () => {
         
         <RowCategory/>
         <View  style={styles.itens}>
-            <RowCard/>
-            <RowCard/>
-            <RowCard/>
-            <RowCard/>
+           <ProductList />
             
         </View>
       
