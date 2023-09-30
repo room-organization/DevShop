@@ -19,24 +19,19 @@ interface ProductProps {
 
 
 export const Product = ({ route }: ProductProps) => {
-  const [products, setProducts] = useState({})
+  const [product, setProduct] = useState({})
   const { productId } = route.params;
 
   useEffect(() => {
     async function fetchProducts() {
       const response = await api.get(`/products/${productId}`)
-      setProducts(response.data)
+      setProduct(response.data)
     }
 
     fetchProducts()
   }, [])
 
-  function po() {
-    console.log("hhhhhh")
-    console.log(products);
-  }
-  po()
   return (
-   <ProductInfo data={products}/>
+   <ProductInfo data={product}/>
   );
 };
