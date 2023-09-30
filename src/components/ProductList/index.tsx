@@ -12,7 +12,7 @@ export function ProductList() {
         const response = await api.get('/products')
         setProducts(response.data)
 
-        console.log(response.data)
+       
       }
   
       fetchProducts()

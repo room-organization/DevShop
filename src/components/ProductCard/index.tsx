@@ -17,8 +17,9 @@ export function ProductCard({ data, ...rest }: ProductCardProps) {
     const navigation = useNavigation<CardProductScreenProp>()
 
     function openProduct() {
-        navigation.navigate('Product');
+        navigation.navigate('Product', {productId: data.id} );
     }
+
     return(
         <TouchableOpacity style={styles.container} onPress={openProduct} {...rest}>
               <ImageBackground source={{uri: data.images?.[0]?.url}} style={styles.image}>
