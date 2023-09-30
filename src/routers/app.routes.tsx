@@ -38,7 +38,7 @@ export type RootStackParamList = {
   Home: undefined;
   Offer: undefined;
   Payments: undefined;
-  Product: undefined;
+  Product:  { productId: string };
   User: undefined;
 };
 
