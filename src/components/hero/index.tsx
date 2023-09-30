@@ -9,11 +9,18 @@ export function Hero() {
   const handleElipsePress = (index) => {
     setActiveElipse(index);
   };
+  const data = [
+    require('../../assets/images/hero.jpeg'),
+    require('../../assets/images/Shoes_Adidas.png'),
+    require('../../assets/images/Shoes_Nike.png'),
+    require('../../assets/images/Camisola_Capuz.png'),
+    require('../../assets/images/Calcoes.png'),
+  ]
 
   return (
     <View style={styles.hero}>
       <ImageBackground
-        source={require('../../assets/images/hero.jpeg')}
+        source={data[activeElipse]}
         style={styles.imageBackground}>
           <Text style={styles.text}>Explore nossos produtos</Text>
         </ImageBackground>
