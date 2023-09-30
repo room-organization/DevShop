@@ -23,12 +23,12 @@ export const Product = ({ route }: ProductProps) => {
   const { productId } = route.params;
 
   useEffect(() => {
-    async function fetchProducts() {
+    async function fetchProduct() {
       const response = await api.get(`/products/${productId}`)
       setProduct(response.data)
     }
 
-    fetchProducts()
+    fetchProduct()
   }, [])
 
   return (

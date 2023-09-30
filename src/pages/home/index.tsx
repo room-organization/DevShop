@@ -23,11 +23,8 @@ export const Home = () => {
         
         <RowCategory/>
         <View  style={styles.itens}>
-           <ProductList />
-            
+          <ProductList />  
         </View>
-      
-      
      </ScrollView>
    </SafeAreaView>
  );
