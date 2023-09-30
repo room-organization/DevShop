@@ -11,8 +11,6 @@ export function ProductList() {
       async function fetchProducts() {
         const response = await api.get('/products')
         setProducts(response.data)
-
-       
       }
   
       fetchProducts()
