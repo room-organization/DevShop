@@ -4,8 +4,8 @@ import {Feather} from '@expo/vector-icons'
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../../routers/app.routes';
 import { useNavigation } from '@react-navigation/native';
-import { Product } from '../../utils/types';
 import { Dollar } from '../../utils/currency';
+import { Product } from '../../utils/types';
 
 type CardProductScreenProp = StackNavigationProp<RootStackParamList, 'Product'>;
 

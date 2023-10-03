@@ -1,37 +1,53 @@
-import { View, Text, Image, Button, TouchableOpacity } from "react-native";
-import { Feather } from "@expo/vector-icons";
-
-import { styles } from "./styles";
-import theme from "../../global/styles/theme";
-import { ScrollView } from "react-native-gesture-handler";
-import { useRoute } from "@react-navigation/native";
+import React, { useEffect, useState } from "react";
+import { RouteProp } from "@react-navigation/native";
 import { RootStackParamList } from "../../routers/app.routes";
-import { StackNavigationProp } from "@react-navigation/stack";
-import { useEffect, useState } from "react";
-import { api } from "../../lib/axios";
 import { ProductInfo } from "./components/ProductInfo";
+import { Product as ProductType } from "../../utils/types";
+import { api } from "../../lib/axios";
 
-export type ProductScreenRouteProp = StackNavigationProp<RootStackParamList, 'Product'>;
+type ProductScreenRouteProp = RouteProp<RootStackParamList, "Product">;
 
 interface ProductProps {
   route: ProductScreenRouteProp;
 }
 
-
-export const Product = ({ route }: ProductProps) => {
-  const [product, setProduct] = useState({})
-  const { productId } = route.params;
+export const Product: React.FC<ProductProps> = ({ route }) => {
+  const [product, setProduct] = useState<ProductType>({
+    id: "",
+    category: {
+      id: "",
+      name: "",
+      billboard: {
+        id: "",
+        imageUrl: "",
+        label: "",
+      },
+    },
+    name: "",
+    price: "",
+    isFeatured: false,
+    size: {
+      id: "",
+      name: "",
+      value: "",
+    },
+    color: {
+      id: "",
+      name: "",
+      value: "",
+    },
+    images: [],
+  });
 
   useEffect(() => {
     async function fetchProduct() {
-      const response = await api.get(`/products/${productId}`)
-      setProduct(response.data)
+      const { productId } = route.params;
+      const response = await api.get(`/products/${productId}`);
+      setProduct(response.data);
     }
 
-    fetchProduct()
-  }, [])
+    fetchProduct();
+  }, [route.params]);
 
-  return (
-   <ProductInfo data={product}/>
-  );
+  return <ProductInfo data={product} />;
 };
