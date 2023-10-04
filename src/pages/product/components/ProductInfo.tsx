@@ -1,15 +1,21 @@
-import { View, Text, Image, TouchableOpacity } from "react-native";
-import { Feather } from "@expo/vector-icons";
-import { styles } from "../styles";
-import { ScrollView } from "react-native-gesture-handler";
-import { Product } from "../../../utils/types";
-import { Dollar } from "../../../utils/currency";
+import { View, Text, Image, TouchableOpacity } from 'react-native'
+import { Feather } from '@expo/vector-icons'
+import { styles } from '../styles'
+import { ScrollView } from 'react-native-gesture-handler'
+import { Product } from '../../../utils/types'
+import { Dollar } from '../../../utils/currency'
+import useCart from '../../../hooks/use-cart'
 
 interface ProductInfoProps {
-  data: Product;
+  data: Product
 }
 
 export function ProductInfo({ data }: ProductInfoProps) {
+  const cart = useCart()
+
+  function handleAddToCart() {
+    cart.addItem(data)
+  }
   return (
     <View style={styles.container}>
       <View style={styles.showcase}>
@@ -32,7 +38,7 @@ export function ProductInfo({ data }: ProductInfoProps) {
                 <Text></Text>
               </View>
 
-              <View  style={{flexDirection: "row", gap: 4}}>
+              <View style={{ flexDirection: 'row', gap: 4 }}>
                 <Text style={styles.label}>Color:</Text>
                 <View
                   style={{
@@ -50,12 +56,12 @@ export function ProductInfo({ data }: ProductInfoProps) {
 
       <View>
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button} onPress={handleAddToCart}>
             <Text style={styles.textButton}>Add to cart</Text>
             <Feather name="shopping-cart" style={styles.icon} />
           </TouchableOpacity>
         </View>
       </View>
     </View>
-  );
+  )
 }

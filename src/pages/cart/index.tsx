@@ -1,21 +1,22 @@
-import React from "react";
-import { View, Text } from "react-native";
+import React from 'react'
 import {
+  View,
+  Text,
   ScrollView,
   TouchableOpacity,
   SafeAreaView,
-  FlatList,
-} from "react-native";
-import { styles } from "./styles";
-import { CartCard } from "../../components/cartCard";
-import { Header } from "../../components/header";
-import Ionicons from "@expo/vector-icons/Ionicons";
-import theme from "../../global/styles/theme";
-import { CartItem } from "./components/CartItem";
-import { Cupon } from "./components/Cupon";
-import { Summary } from "./components/Summary";
+} from 'react-native'
+
+import { styles } from './styles'
+import { Header } from '../../components/header'
+import theme from '../../global/styles/theme'
+import { CartItem } from './components/CartItem'
+import { Cupon } from './components/Cupon'
+import { Summary } from './components/Summary'
+import useCart from '../../hooks/use-cart'
 
 export function Cart() {
+  const cart = useCart()
   return (
     <View style={styles.container}>
       <SafeAreaView
@@ -25,8 +26,9 @@ export function Cart() {
 
         <ScrollView style={styles.content}>
           <View style={styles.content}>
-            <CartItem />
-            <CartItem />
+            {cart.items.map((item) => (
+              <CartItem key={item.id} data={item} />
+            ))}
             <Cupon />
             <Summary />
           </View>
@@ -37,5 +39,5 @@ export function Cart() {
         </TouchableOpacity>
       </SafeAreaView>
     </View>
-  );
+  )
 }

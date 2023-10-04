@@ -1,10 +1,8 @@
-import { StyleSheet, Dimensions } from "react-native";
-import { RFPercentage } from "react-native-responsive-fontsize";
+import { StyleSheet } from 'react-native'
 
-const height = Dimensions.get("screen").height;
 export const styles = StyleSheet.create({
-    container: {
-        flexDirection: 'row',
-        paddingVertical: 2,
-    }
-   });
+  container: {
+    flexDirection: 'row',
+    paddingVertical: 2,
+  },
+})

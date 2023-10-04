@@ -1,53 +1,53 @@
-import React, { useEffect, useState } from "react";
-import { RouteProp } from "@react-navigation/native";
-import { RootStackParamList } from "../../routers/app.routes";
-import { ProductInfo } from "./components/ProductInfo";
-import { Product as ProductType } from "../../utils/types";
-import { api } from "../../lib/axios";
+import React, { useEffect, useState } from 'react'
+import { RouteProp } from '@react-navigation/native'
+import { RootStackParamList } from '../../routers/app.routes'
+import { ProductInfo } from './components/ProductInfo'
+import { Product as ProductType } from '../../utils/types'
+import { api } from '../../lib/axios'
 
-type ProductScreenRouteProp = RouteProp<RootStackParamList, "Product">;
+type ProductScreenRouteProp = RouteProp<RootStackParamList, 'Product'>
 
 interface ProductProps {
-  route: ProductScreenRouteProp;
+  route: ProductScreenRouteProp
 }
 
 export const Product: React.FC<ProductProps> = ({ route }) => {
   const [product, setProduct] = useState<ProductType>({
-    id: "",
+    id: '',
     category: {
-      id: "",
-      name: "",
+      id: '',
+      name: '',
       billboard: {
-        id: "",
-        imageUrl: "",
-        label: "",
+        id: '',
+        imageUrl: '',
+        label: '',
       },
     },
-    name: "",
-    price: "",
+    name: '',
+    price: '',
     isFeatured: false,
     size: {
-      id: "",
-      name: "",
-      value: "",
+      id: '',
+      name: '',
+      value: '',
     },
     color: {
-      id: "",
-      name: "",
-      value: "",
+      id: '',
+      name: '',
+      value: '',
     },
     images: [],
-  });
+  })
 
   useEffect(() => {
     async function fetchProduct() {
-      const { productId } = route.params;
-      const response = await api.get(`/products/${productId}`);
-      setProduct(response.data);
+      const { productId } = route.params
+      const response = await api.get(`/products/${productId}`)
+      setProduct(response.data)
     }
 
-    fetchProduct();
-  }, [route.params]);
+    fetchProduct()
+  }, [route.params])
 
-  return <ProductInfo data={product} />;
-};
+  return <ProductInfo data={product} />
+}

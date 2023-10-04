@@ -1,12 +1,9 @@
-import { Dimensions, StyleSheet } from "react-native";
-import { RFPercentage } from "react-native-responsive-fontsize";
-import theme from "../../global/styles/theme";
+import { StyleSheet } from 'react-native'
 
-const width = Dimensions.get("screen").width;
 export const styles = StyleSheet.create({
   container: {
-    flexDirection: "row",
-    justifyContent: "center",
-    flexWrap: "wrap",
+    flexDirection: 'row',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
   },
-});
+})
