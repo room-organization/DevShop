@@ -1,5 +1,5 @@
-import { View, Text, TextInput, TouchableOpacity } from "react-native";
-import { styles } from "./styles";
+import { View, Text, TextInput, TouchableOpacity } from 'react-native'
+import { styles } from './styles'
 
 export function Cupon() {
   return (
@@ -9,5 +9,5 @@ export function Cupon() {
         <Text style={styles.textButton}>Apply</Text>
       </TouchableOpacity>
     </View>
-  );
+  )
 }

@@ -1,17 +1,13 @@
-import {Dimensions, StyleSheet, StatusBar} from 'react-native'
-import theme from '../../global/styles/theme';
-
-const width = Dimensions.get('screen').width;
+import { StyleSheet, StatusBar } from 'react-native'
 
 export const styles = StyleSheet.create({
-    container:{
-        paddingTop: StatusBar.currentHeight,
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    text:{
-        color: 'black'
-    }
+  container: {
+    paddingTop: StatusBar.currentHeight,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    color: 'black',
+  },
 })
-;

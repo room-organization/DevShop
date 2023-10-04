@@ -1,10 +1,8 @@
-import { Dimensions, StyleSheet } from "react-native";
-import { RFPercentage } from "react-native-responsive-fontsize";
-import theme from "../../global/styles/theme";
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   container: {
     padding: 20,
-    flexDirection: "row",
+    flexDirection: 'row',
   },
-});
+})

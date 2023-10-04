@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, Image, ImageBackground, TouchableOpacity } from 'react-native';
+import React, { useState, useEffect } from 'react'
+import { View, Text, ImageBackground, TouchableOpacity } from 'react-native'
 
-import { styles } from './styles';
+import { styles } from './styles'
 
 export function Hero() {
-  const [activeElipse, setActiveElipse] = useState(0);
+  const [activeElipse, setActiveElipse] = useState(0)
 
-  const handleElipsePress = (index) => {
-    setActiveElipse(index);
-  };
+  const handleElipsePress = (index: number) => {
+    setActiveElipse(index)
+  }
 
   useEffect(() => {
     // Iniciar um temporizador que irá trocar as imagens a cada X segundos
     const timer = setInterval(() => {
-      setActiveElipse((activeElipse + 1) % data.length);
-    }, 2000);
+      setActiveElipse((activeElipse + 1) % data.length)
+    }, 2000)
 
     // Destruir o temporizador quando o componente for desmontado
-    return () => clearInterval(timer);
-  }, []);
+    return () => clearInterval(timer)
+  }, [])
 
   const data = [
     require('../../assets/images/hero.jpeg'),
@@ -32,19 +32,22 @@ export function Hero() {
     <View style={styles.hero}>
       <ImageBackground
         source={data[activeElipse]}
-        style={styles.imageBackground}>
-          <Text style={styles.text}>Explore nossos produtos</Text>
-        </ImageBackground>
+        style={styles.imageBackground}
+      >
+        <Text style={styles.text}>Explore nossos produtos</Text>
+      </ImageBackground>
 
-        <View style={styles.elipseGroup}>
-          {Array(5).fill(0).map((_, index) => (
+      <View style={styles.elipseGroup}>
+        {Array(5)
+          .fill(0)
+          .map((_, index) => (
             <TouchableOpacity
               key={index}
               onPress={() => handleElipsePress(index)}
-              style={ index === activeElipse ? styles.elipse : styles.elipseOff}>
-            </TouchableOpacity>
+              style={index === activeElipse ? styles.elipse : styles.elipseOff}
+            ></TouchableOpacity>
           ))}
-        </View>
-     </View>
-  );
+      </View>
+    </View>
+  )
 }
