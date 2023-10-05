@@ -13,7 +13,7 @@ export function SearchSection() {
           size={RFValue(20)}
           style={styles.iconSearch}
         />
-        <TextInput placeholder="Search Product" style={styles.placeholder} />
+        <TextInput placeholder="Search Product" style={styles.textInput}/>
       </View>
       <View style={styles.iconContainer}>
         <Feather name="menu" size={RFValue(25)} style={styles.iconMenu} />

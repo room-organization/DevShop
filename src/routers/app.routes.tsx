@@ -14,6 +14,7 @@ import theme from '../global/styles/theme'
 import { Cart } from '../pages/cart'
 import { Categories } from '../pages/categories'
 import { CategoryItems } from '../pages/categoryItems'
+import { Explore } from '../pages/explore'
 import { Favorites } from '../pages/favorites'
 import { Home } from '../pages/home'
 import { Offer } from '../pages/offer'
@@ -32,6 +33,7 @@ export type RootStackParamList = {
   Cart: undefined
   Categories: undefined
   CategoryItems: undefined
+  Explore: undefined
   Favorites: undefined
   Home: undefined
   Offer: undefined
@@ -51,6 +53,7 @@ function StackNavigator() {
       <Stack.Screen name="Cart" component={Cart} />
       <Stack.Screen name="Categories" component={Categories} />
       <Stack.Screen name="CategoryItems" component={CategoryItems} />
+      <Stack.Screen name='Explore' component={Explore}/>
       <Stack.Screen name="Favorites" component={Favorites} />
       <Stack.Screen name="Offer" component={Offer} />
       <Stack.Screen name="Payments" component={Payments} />
@@ -90,7 +93,7 @@ function TabNavigator() {
       />
       <Tab.Screen
         name="Explore"
-        component={Categories}
+        component={Explore}
         options={{
           tabBarIcon: ({ size, color }) => (
             <Feather name="search" color={color} size={size} />

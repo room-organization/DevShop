@@ -4,40 +4,40 @@ import theme from '../../global/styles/theme'
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: theme.colors_backgrounds.primary,
-    height: RFPercentage(6),
+    height: RFPercentage(7),
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     marginVertical: 10,
-    padding: 15,
+    marginHorizontal: 2
   },
   searchBar: {
     backgroundColor: theme.colors_backgrounds.primary,
-    height: RFPercentage(5),
+    height: RFPercentage(6),
     borderRadius: 10,
     flexDirection: 'row',
-    justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 1,
+    flexGrow: 1,
+    marginHorizontal: 5,
     borderColor: theme.colors_backgrounds.lightBlue,
   },
   iconSearch: {
-    marginHorizontal: 10,
+    marginHorizontal: 20,
     color: theme.colors_backgrounds.icons,
+  },
+  textInput:{
+    flexGrow: 1,
+    height: RFPercentage(6),
+
+
   },
   iconContainer: {
     backgroundColor: theme.colors_backgrounds.secondary,
     borderRadius: 10,
-    height: RFPercentage(5),
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 10,
+    padding: 9,
   },
   iconMenu: {
     color: theme.colors_backgrounds.primary,
-  },
-  placeholder: {
-    color: theme.colors_text.secondary,
-  },
+  }
 })

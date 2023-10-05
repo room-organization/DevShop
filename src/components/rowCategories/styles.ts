@@ -4,8 +4,10 @@ import theme from '../../global/styles/theme'
 export const styles = StyleSheet.create({
   rowCategories: {
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
     marginVertical: 10,
+  },
+  scroll:{
+    marginHorizontal: 2,
   },
   itemRowCategory: {
     height: 30,
@@ -13,9 +15,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 15,
     borderWidth: 1,
-  },
-  selectedCategory: {
-    // backgroundColor: theme.colors_backgrounds.secondary
+    marginHorizontal: 10
   },
   active: {
     backgroundColor: theme.colors_backgrounds.secondary,

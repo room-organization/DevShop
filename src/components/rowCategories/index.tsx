@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native'
 
 import { styles } from './styles'
 
 export function RowCategory() {
-  const categories = ['All', 'Newest', 'Popular', 'Dev']
+  const categories = ['All', 'Newest', 'Popular', 'Dev', 'Hi', ]
   const [selectedCategory, setSelectedCategory] = useState('All')
 
   const handleSelectedCategoryPress = (category: string) => {
@@ -12,19 +12,25 @@ export function RowCategory() {
   }
 
   return (
-    <View style={styles.rowCategories}>
-      {categories.map((category) => (
-        <TouchableOpacity
-          key={category}
-          style={[
-            styles.itemRowCategory,
-            selectedCategory === category && styles.active,
-          ]}
-          onPress={() => handleSelectedCategoryPress(category)}
-        >
-          <Text>{category}</Text>
-        </TouchableOpacity>
-      ))}
-    </View>
+    <ScrollView horizontal 
+      showsHorizontalScrollIndicator={false} 
+      style={styles.scroll}
+      >
+      <View style={styles.rowCategories} >
+        {categories.map((category) => (
+          <TouchableOpacity
+            key={category}
+            style={[
+              styles.itemRowCategory,
+              selectedCategory === category && styles.active,
+            ]}
+            onPress={() => handleSelectedCategoryPress(category)}
+          >
+            <Text>{category}</Text>
+          </TouchableOpacity>
+        ))}
+      </View>
+
+    </ScrollView>
   )
 }
