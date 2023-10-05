@@ -20,6 +20,7 @@ import { Offer } from '../pages/offer'
 import { Payments } from '../pages/payments'
 import { Product } from '../pages/product'
 import { User } from '../pages/user'
+import CartIconWithBadge  from '../pages/cart/components/CartIconWithBadge'
 
 // const {Navigator, Screen} = createBottomTabNavigator();
 
@@ -101,8 +102,8 @@ function TabNavigator() {
         component={Cart}
         options={{
           tabBarIcon: ({ size, color }) => (
-            <Feather name="shopping-cart" color={color} size={size} />
-          ),
+            <CartIconWithBadge size={size} color={color} />
+            ),
         }}
       />
       <Tab.Screen
