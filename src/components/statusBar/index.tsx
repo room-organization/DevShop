@@ -8,6 +8,9 @@ const data = [
   require('../../assets/images/Shoes_Nike.png'),
   require('../../assets/images/Camisola_Capuz.png'),
   require('../../assets/images/Calcoes.png'),
+  require('../../assets/images/neom-WLeWJW_WneE-unsplash.jpg'),
+  require('../../assets/images/neom-yx7TJle8LhM-unsplash.jpg'),
+  require('../../assets/images/ROOM_TShirt.png'),
 ]
 
 export const StatusBar = () => {
