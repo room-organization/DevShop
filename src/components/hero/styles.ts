@@ -1,11 +1,12 @@
 import { StyleSheet, Dimensions } from 'react-native'
 import theme from '../../global/styles/theme'
+import { RFPercentage, RFValue } from 'react-native-responsive-fontsize'
 
 const height = Dimensions.get('screen').height
 
 export const styles = StyleSheet.create({
   hero: {
-    height: height / 5,
+    height: RFPercentage(32),
     marginTop: 10,
   },
   imageBackground: {
@@ -24,16 +25,16 @@ export const styles = StyleSheet.create({
   },
   elipse: {
     backgroundColor: theme.colors_backgrounds.btnGreen,
-    width: 15,
-    height: 15,
-    borderRadius: 10,
-    marginHorizontal: 5,
+    width: RFValue(20),
+    height: RFValue(20),
+    borderRadius: RFValue(20),
+    marginHorizontal: RFValue(10),
   },
   elipseOff: {
     backgroundColor: theme.colors_backgrounds.elipseHero,
-    width: 15,
-    height: 15,
-    borderRadius: 10,
-    marginHorizontal: 5,
+    width: RFValue(20),
+    height: RFValue(20),
+    borderRadius: RFValue(20),
+    marginHorizontal: RFValue(10),
   },
 })

@@ -10,6 +10,10 @@ export type CategoryItemsScreenProp = StackNavigationProp<
   RootStackParamList,
   'CategoryItems'
 >
+export type ExploreScreenProp = StackNavigationProp<
+  RootStackParamList,
+  'Explore'
+>
 export type FavoritesScreenProp = StackNavigationProp<
   RootStackParamList,
   'Favorites'

@@ -8,12 +8,10 @@ import { ProductList } from '../../components/ProductList'
 
 export const Home = () => {
   return (
-    <SafeAreaView>
-      <View style={styles.center}>
-        <SearchSection />
-      </View>
+    <SafeAreaView style={styles.container}>
+      <SearchSection />
       <ScrollView
-        style={[styles.container, styles.center]}
+        style={styles.scrollView}
         showsVerticalScrollIndicator={false}
       >
         <View style={styles.row}>
@@ -23,10 +21,10 @@ export const Home = () => {
         <HorizontasScrollView />
         <Hero />
 
-        <RowCategory />
-        <View style={styles.itens}>
+        {/* <RowCategory /> */}
+        {/* <View style={styles.itens}>
           <ProductList />
-        </View>
+        </View> */}
       </ScrollView>
     </SafeAreaView>
   )

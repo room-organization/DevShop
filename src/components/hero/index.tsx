@@ -10,22 +10,10 @@ export function Hero() {
     setActiveElipse(index)
   }
 
-  useEffect(() => {
-    // Iniciar um temporizador que irá trocar as imagens a cada X segundos
-    const timer = setInterval(() => {
-      setActiveElipse((activeElipse + 1) % data.length)
-    }, 2000)
-
-    // Destruir o temporizador quando o componente for desmontado
-    return () => clearInterval(timer)
-  }, [])
-
   const data = [
     require('../../assets/images/hero.jpeg'),
-    require('../../assets/images/Shoes_Adidas.png'),
-    require('../../assets/images/Shoes_Nike.png'),
-    require('../../assets/images/Camisola_Capuz.png'),
-    require('../../assets/images/Calcoes.png'),
+    require('../../assets/images/billboard-bg.png'),
+    require('../../assets/images/neom-WLeWJW_WneE-unsplash.jpg'),
   ]
 
   return (
@@ -38,16 +26,14 @@ export function Hero() {
       </ImageBackground>
 
       <View style={styles.elipseGroup}>
-        {Array(5)
-          .fill(0)
-          .map((_, index) => (
-            <TouchableOpacity
-              key={index}
-              onPress={() => handleElipsePress(index)}
-              style={index === activeElipse ? styles.elipse : styles.elipseOff}
-            ></TouchableOpacity>
-          ))}
+        {data.map((image, index) => (
+          <TouchableOpacity
+            key={index}
+            onPress={() => handleElipsePress(index)}
+            style={index === activeElipse ? styles.elipse : styles.elipseOff}
+          ></TouchableOpacity>
+        ))}
       </View>
     </View>
-  )
+  );
 }

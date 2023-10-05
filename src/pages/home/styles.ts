@@ -1,15 +1,14 @@
-import { Dimensions, StyleSheet } from 'react-native'
+import { Dimensions, StyleSheet, StatusBar } from 'react-native'
 import theme from '../../global/styles/theme'
 
-const height = Dimensions.get('screen').height
 
 export const styles = StyleSheet.create({
   container: {
-    height,
+    paddingVertical: StatusBar.currentHeight,
     backgroundColor: theme.colors_backgrounds.primary,
   },
-  center: {
-    marginHorizontal: 20,
+  scrollView:{
+    backgroundColor: theme.colors_backgrounds.primary,
   },
   row: {
     flexDirection: 'row',

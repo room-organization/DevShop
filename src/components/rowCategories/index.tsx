@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native'
 
 import { styles } from './styles'
 
@@ -12,7 +12,7 @@ export function RowCategory() {
   }
 
   return (
-    <View style={styles.rowCategories}>
+    <ScrollView showsHorizontalScrollIndicator={false} style={styles.rowCategories}>
       {categories.map((category) => (
         <TouchableOpacity
           key={category}
@@ -25,6 +25,6 @@ export function RowCategory() {
           <Text>{category}</Text>
         </TouchableOpacity>
       ))}
-    </View>
+    </ScrollView>
   )
 }
