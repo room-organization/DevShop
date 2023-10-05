@@ -28,6 +28,7 @@ export const styles = StyleSheet.create({
   },
   itens: {
     //    height: height- RFPercentage(20),
+    // borderWidth: 1
   },
-  hero: {},
+
 })

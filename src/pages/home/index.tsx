@@ -21,10 +21,10 @@ export const Home = () => {
         <HorizontasScrollView />
         <Hero />
 
-        {/* <RowCategory /> */}
-        {/* <View style={styles.itens}>
+        <RowCategory />
+        <View style={styles.itens}>
           <ProductList />
-        </View> */}
+        </View>
       </ScrollView>
     </SafeAreaView>
   )
