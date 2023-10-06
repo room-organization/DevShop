@@ -3,6 +3,7 @@ import { persist } from 'zustand/middleware'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
 import { Product } from '../utils/types'
+import { errorMessage, successMessage } from '../utils/toast'
 
 interface CartStore {
   items: Product[]
@@ -20,11 +21,11 @@ const useCart = create(
         const existingItem = currentItems.find((item) => item.id === data.id)
 
         if (existingItem) {
-          return // toast('Item already in cart.');
+          return errorMessage('Item already in cart.')
         }
 
         set({ items: [...get().items, data] })
-        // toast.success('Item added to cart.');
+        successMessage('Item added to cart.')
       },
       removeItem: async (id: string) => {
         await AsyncStorage.setItem(
@@ -32,7 +33,7 @@ const useCart = create(
           JSON.stringify([...get().items.filter((item) => item.id !== id)]),
         )
         set({ items: [...get().items.filter((item) => item.id !== id)] })
-        // toast.success('Item removed from cart.');
+        successMessage('Item removed from cart.')
       },
       removeAll: async () => {
         await AsyncStorage.removeItem('cart')

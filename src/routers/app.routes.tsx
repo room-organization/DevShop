@@ -21,7 +21,7 @@ import { Offer } from '../pages/offer'
 import { Payments } from '../pages/payments'
 import { Product } from '../pages/product'
 import { User } from '../pages/user'
-import CartIconWithBadge  from '../pages/cart/components/CartIconWithBadge'
+import CartIconWithBadge from '../pages/cart/components/CartIconWithBadge'
 
 // const {Navigator, Screen} = createBottomTabNavigator();
 
@@ -53,7 +53,7 @@ function StackNavigator() {
       <Stack.Screen name="Cart" component={Cart} />
       <Stack.Screen name="Categories" component={Categories} />
       <Stack.Screen name="CategoryItems" component={CategoryItems} />
-      <Stack.Screen name='Explore' component={Explore}/>
+      <Stack.Screen name="Explore" component={Explore} />
       <Stack.Screen name="Favorites" component={Favorites} />
       <Stack.Screen name="Offer" component={Offer} />
       <Stack.Screen name="Payments" component={Payments} />
@@ -106,7 +106,7 @@ function TabNavigator() {
         options={{
           tabBarIcon: ({ size, color }) => (
             <CartIconWithBadge size={size} color={color} />
-            ),
+          ),
         }}
       />
       <Tab.Screen
