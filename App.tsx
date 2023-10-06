@@ -1,17 +1,13 @@
-import 'react-native-gesture-handler';
-import {NavigationContainer} from '@react-navigation/native';
+import 'react-native-gesture-handler'
 
-import { Routers } from './src/routers';
-import { StackRouters } from './src/routers/stack.routes';
-import { Home } from './src/pages/home';
-import AppRoutes from './src/routers/app.routes';
+import AppRoutes from './src/routers/app.routes'
+import Toast from 'react-native-toast-message'
 
 export default function App() {
   return (
-    // <Routers/>
-    // <Home/>
-    <AppRoutes/>
-  );
+    <>
+      <AppRoutes />
+      <Toast />
+    </>
+  )
 }
-
-

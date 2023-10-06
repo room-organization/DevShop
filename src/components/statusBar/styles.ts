@@ -1,8 +1,8 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
-    container: {
-        flexDirection: 'row',
-        paddingVertical: 3,
-    }
-   });
+  container: {
+    flexDirection: 'row',
+    paddingVertical: 2,
+  },
+})
