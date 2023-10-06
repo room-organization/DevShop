@@ -21,7 +21,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/images/hero.jpeg",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.room.devShop"
     },
     "web": {
       "favicon": "./src/assets/images/hero.jpeg"
