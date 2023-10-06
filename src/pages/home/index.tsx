@@ -14,17 +14,11 @@ export const Home = () => {
         style={styles.scrollView}
         showsVerticalScrollIndicator={false}
       >
-        <View style={styles.row}>
           <Text style={styles.category}>Category</Text>
-          <Text style={styles.more}>See All</Text>
-        </View>
         <HorizontasScrollView />
         <Hero />
-
         <RowCategory />
-        <View style={styles.itens}>
-          <ProductList />
-        </View>
+        <ProductList />
       </ScrollView>
     </SafeAreaView>
   )

@@ -1,13 +1,13 @@
 import { StyleSheet } from 'react-native'
 import theme from '../../global/styles/theme'
+import { RFValue } from 'react-native-responsive-fontsize'
 
 export const styles = StyleSheet.create({
   container: {
     backgroundColor: theme.colors_backgrounds.primary,
     borderRadius: 5,
-    padding: 15,
-    margin: 10,
-    marginHorizontal: 15,
+    padding: RFValue(30),
+    margin: RFValue(5),
     borderWidth: 1,
     borderColor: theme.colors_backgrounds.secondary,
   },
