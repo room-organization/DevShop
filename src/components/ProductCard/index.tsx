@@ -30,11 +30,12 @@ export function ProductCard({ data, ...rest }: ProductCardProps) {
 
   return (
     <TouchableOpacity style={styles.container} onPress={openProduct} {...rest}>
-      <ImageBackground
-        source={{ uri: data.images?.[0]?.url }}
-        style={styles.image}
-      />
-
+      <View style={styles.imageContainer}>
+        <ImageBackground
+          source={{ uri: data.images?.[0]?.url }}
+          style={styles.image}
+        />
+      </View>
 
       <View style={styles.infoItem}>
         <View style={styles.describe}>
