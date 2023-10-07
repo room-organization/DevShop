@@ -4,18 +4,14 @@ import {Feather} from '@expo/vector-icons'
 
 import { styles } from './styles'
 import { RFValue } from 'react-native-responsive-fontsize'
+import { SearchSection } from '../../components/searchSection'
+import { Categories } from '../categories'
 
 export function Explore() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Man Fashion</Text>
-      <View style={styles.row}>
-        <Category/>
-      </View>
-      <Text>Woman Fashion</Text>
-      <View style={styles.row}>
-        
-      </View>
+      <SearchSection/>
+      <Categories/>
     </SafeAreaView>
   )
 }

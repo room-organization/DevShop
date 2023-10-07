@@ -5,21 +5,67 @@ import { Header } from '../../components/header/'
 
 export const Categories = () => {
   return (
-    <View style={{ paddingTop: StatusBar.currentHeight, marginBottom: 90 }}>
-      <Header title="Category" />
-      <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
-        <View style={styles.items}>
-          <CategoryItem icon="tshirt" name="Shirt" />
+    <View style={styles.container}>
           <CategoryItem
             icon="tshirt"
             name="Shirt"
-            style={{ backgroundColor: 'lightgray' }}
+            style={styles.items}
           />
-          <CategoryItem icon="shoe-prints" name="Shoes" />
-          <CategoryItem icon="briefcase" name="Work" />
-          <CategoryItem icon="laptop" name="Laptop" />
-        </View>
-      </ScrollView>
+          <CategoryItem 
+            icon="shoe-prints" 
+            name="Shoes" 
+            style={styles.items}
+          />
+          <CategoryItem 
+            icon="briefcase" 
+            name="Work" 
+            style={styles.items}
+          />
+          <CategoryItem
+            icon="laptop"
+            name="Laptop"
+            style={styles.items}
+          />
+          <CategoryItem
+            icon="tshirt"
+            name="Shirt"
+            style={styles.items}
+          />
+          <CategoryItem 
+            icon="shoe-prints" 
+            name="Shoes" 
+            style={styles.items}
+          />
+          <CategoryItem 
+            icon="briefcase" 
+            name="Work" 
+            style={styles.items}
+          />
+          <CategoryItem
+            icon="laptop"
+            name="Laptop"
+            style={styles.items}
+          />
+          <CategoryItem
+            icon="tshirt"
+            name="Shirt"
+            style={styles.items}
+          />
+          <CategoryItem 
+            icon="shoe-prints" 
+            name="Shoes" 
+            style={styles.items}
+          />
+          <CategoryItem 
+            icon="briefcase" 
+            name="Work" 
+            style={styles.items}
+          />
+          <CategoryItem
+            icon="laptop"
+            name="Laptop"
+            style={styles.items}
+          />
     </View>
   )
 }
