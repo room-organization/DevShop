@@ -3,7 +3,6 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import {
   createStackNavigator,
-  StackNavigationProp,
 } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
@@ -23,7 +22,6 @@ import { Product } from '../pages/product'
 import { User } from '../pages/user'
 import CartIconWithBadge from '../pages/cart/components/CartIconWithBadge'
 
-// const {Navigator, Screen} = createBottomTabNavigator();
 
 const Tab = createBottomTabNavigator()
 

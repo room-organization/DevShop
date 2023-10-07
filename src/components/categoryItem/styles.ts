@@ -1,11 +1,17 @@
 import { StyleSheet } from 'react-native'
+import { RFValue } from 'react-native-responsive-fontsize'
 
 export const styles = StyleSheet.create({
   container: {
-    padding: 20,
-    flexDirection: 'row',
+    paddingHorizontal: RFValue(1),
+    flexDirection: 'column',
     alignItems: 'center',
-    gap: 20,
+    margin: 10
   },
-  icon: {},
+  icon: {
+    borderWidth: 1,
+    borderRadius: 50,
+    padding: 10,
+    marginVertical: RFValue(2)
+  },
 })

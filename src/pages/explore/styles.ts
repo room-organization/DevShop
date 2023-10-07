@@ -1,14 +1,13 @@
 import { StyleSheet, StatusBar } from 'react-native'
 import { RFValue } from 'react-native-responsive-fontsize'
+import theme from '../../global/styles/theme'
 
 export const styles = StyleSheet.create({
   container: {
     paddingTop: StatusBar.currentHeight,
-    // flex: 1,
-    // justifyContent: 'center',
-    // alignItems: 'center',
     borderWidth: 1,
-    flexDirection: 'column'
+    flexDirection: 'column',
+    backgroundColor: theme.colors_backgrounds.primary
   },
   row:{
     flexDirection: 'row',
