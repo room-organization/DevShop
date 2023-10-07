@@ -4,12 +4,22 @@ import { RFValue } from 'react-native-responsive-fontsize'
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: theme.colors_backgrounds.primary,
-    borderRadius: 5,
-    padding: RFValue(30),
+    borderRadius: 8,
+    borderBottomWidth: 2,
+    borderBottomColor: '#3C5A5D',
+    borderLeftWidth: 2,
+    borderLeftColor: '#3C5A5D',
+    backgroundColor: '#FFF',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 4,
+      height: 6,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 2,
+    padding: RFValue(10),
     margin: RFValue(5),
-    borderWidth: 1,
-    borderColor: theme.colors_backgrounds.secondary,
   },
   infoItem: {
     flexDirection: 'column',
@@ -23,9 +33,19 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+
+  imageContainer: {
+    width: 150,
+    height: 150,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 8,
+    backgroundColor: '#D9D9D9',
+  },
+
   image: {
-    width: 100,
-    height: 100,
+    width: 130,
+    height: 130,
     // resizeMode: 'contain',
   },
   describe: {
@@ -37,28 +57,32 @@ export const styles = StyleSheet.create({
   },
   category: {
     fontWeight: '500',
-    fontSize: 11,
+    fontSize: 14,
+    opacity: 0.7,
   },
   price: {
     fontWeight: '500',
-    fontSize: 11,
+    fontSize: 18,
   },
   button: {
+    borderRadius: 999,
     flexDirection: 'row',
-    backgroundColor: theme.colors_backgrounds.secondary,
+    marginTop: 10,
+    paddingVertical: 6,
+    paddingHorizontal: 6,
     justifyContent: 'center',
     alignItems: 'center',
-    marginVertical: 10,
-    paddingHorizontal: 6,
-    paddingVertical: 4,
-    gap: 4,
-    borderRadius: 8,
+    alignSelf: 'stretch',
+    borderWidth: 1,
+    borderColor: '#979797',
+    backgroundColor: '#3C5A5D',
   },
   btnText: {
     color: theme.colors_backgrounds.primary,
   },
   btnIcon: {
     color: theme.colors_backgrounds.primary,
+    fontSize: 14,
   },
   rowCard: {
     flexDirection: 'row',
