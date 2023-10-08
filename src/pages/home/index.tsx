@@ -8,6 +8,7 @@ import { ProductList } from '../../components/ProductList'
 export const Home = () => {
   return (
     <SafeAreaView style={styles.container}>
+      
       <ScrollView
         style={styles.scrollView}
         showsVerticalScrollIndicator={false}

@@ -6,9 +6,6 @@ export const styles = StyleSheet.create({
   flexWrap: 'wrap',
   },
   items: {
-    // justifyContent: 'center',
-    // flexDirection: 'column',
-    // marginHorizontal: 40,
-    // backgroundColor: 'white',
+
   },
 })

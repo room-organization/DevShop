@@ -5,7 +5,7 @@ import { styles } from './styles'
 import { RFValue } from 'react-native-responsive-fontsize'
 
 export function SearchSection() {
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState('')  
 
   const [searchResult, setSearchResult] = useState('');
 
