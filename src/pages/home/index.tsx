@@ -14,7 +14,7 @@ export const Home = () => {
         style={styles.scrollView}
         showsVerticalScrollIndicator={false}
       >
-          <Text style={styles.category}>Category</Text>
+        <Text style={styles.category}>Category</Text>
         <HorizontasScrollView />
         <Hero />
         <RowCategory />
