@@ -1,4 +1,5 @@
 import { StyleSheet, StatusBar } from 'react-native'
+import { RFValue } from 'react-native-responsive-fontsize'
 
 export const styles = StyleSheet.create({
   container: {
@@ -12,7 +13,9 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  content: {},
+  content: {
+    marginBottom: RFValue(60),
+  },
 
   button: {
     backgroundColor: '#3C5A5D',
@@ -22,6 +25,7 @@ export const styles = StyleSheet.create({
     height: 50,
     borderRadius: 10,
     marginTop: 35,
+    marginBottom: 10
   },
 
   textButton: {

@@ -51,18 +51,20 @@ export function Cart() {
         <Header />
 
         <ScrollView style={styles.content}>
-          <View style={styles.content}>
+          <View>
             {cart.items.map((item) => (
               <CartItem key={item.id} data={item} />
             ))}
             <Cupon />
             <Summary />
           </View>
+
+          <TouchableOpacity style={styles.button} onPress={handleCheckout}>
+            <Text style={styles.textButton}>Checkout</Text>
+          </TouchableOpacity>
         </ScrollView>
 
-        <TouchableOpacity style={styles.button} onPress={handleCheckout}>
-          <Text style={styles.textButton}>Checkout</Text>
-        </TouchableOpacity>
+
       </SafeAreaView>
     </View>
   )
