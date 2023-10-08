@@ -32,12 +32,4 @@ export const styles = StyleSheet.create({
 
 
   },
-  iconContainer: {
-    backgroundColor: theme.colors_backgrounds.secondary,
-    borderRadius: 10,
-    padding: 9,
-  },
-  iconMenu: {
-    color: theme.colors_backgrounds.primary,
-  }
 })

@@ -1,10 +1,10 @@
-import { ScrollView, View, StatusBar } from 'react-native'
+import { View } from 'react-native'
 import { CategoryItem } from '../../components/categoryItem'
 import { styles } from './styles'
-import { Header } from '../../components/header/'
 
 export const Categories = () => {
   return (
+
     <View style={styles.container}>
           <CategoryItem
             icon="tshirt"
