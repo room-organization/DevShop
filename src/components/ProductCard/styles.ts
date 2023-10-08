@@ -4,6 +4,7 @@ import { RFValue } from 'react-native-responsive-fontsize'
 
 export const styles = StyleSheet.create({
   container: {
+    width: '47%',
     borderRadius: 8,
     borderBottomWidth: 2,
     borderBottomColor: '#3C5A5D',
@@ -19,7 +20,6 @@ export const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 2,
     padding: RFValue(10),
-    margin: RFValue(5),
   },
   infoItem: {
     flexDirection: 'column',
