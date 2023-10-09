@@ -35,9 +35,9 @@ export function Explore() {
       </SearchSection>
       
 
-{search ? (
+      {search ? (
         // Renderize o componente SearchResults quando houver texto de pesquisa
-        <SearchResults />        
+        <SearchResults result={search} />        
       ) : (
         // Renderize as categorias quando não houver texto de pesquisa
         <Categories>
