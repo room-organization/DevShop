@@ -1,51 +1,52 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 
-import { Container, NoResultContainer, NoResultsText } from './styles'; // Importe o estilo necessário
-import { Product } from '../../utils/types';
-import { api } from '../../lib/axios';
-import { ProductCard } from '../ProductCard';
+import { Container, NoResultContainer, NoResultsText } from './styles'
+import { Product } from '../../utils/types'
+import { api } from '../../lib/axios'
+import { ProductCard } from '../ProductCard'
 
-export function SearchResults({ result }) {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [noResults, setNoResults] = useState(false); 
+interface SearchResultsPros {
+  result: string
+}
+
+export function SearchResults({ result }: SearchResultsPros) {
+  const [products, setProducts] = useState<Product[]>([])
+  const [noResults, setNoResults] = useState(false)
 
   const filteredProducts = products.filter((product) => {
-    return product.name.toLowerCase().includes(result.toLowerCase());
-  });
+    return product.name.toLowerCase().includes(result.toLowerCase())
+  })
 
   useEffect(() => {
     async function fetchProduct() {
       try {
-        const response = await api.get('/products');
-        setProducts(response.data);
+        const response = await api.get('/products')
+        setProducts(response.data)
 
-        // Verifique se não há resultados
         if (filteredProducts.length === 0) {
-          setNoResults(true);
+          setNoResults(true)
         } else {
-          setNoResults(false);
+          setNoResults(false)
         }
       } catch (error) {
         // Trate o erro aqui, se necessário
       }
     }
 
-    fetchProduct();
-  }, [result]);
+    fetchProduct()
+  }, [filteredProducts.length, result])
 
   return (
     <Container>
       {noResults ? (
-        // Exiba o texto de "Nenhum resultado encontrado"
         <NoResultContainer>
-            <NoResultsText>Nenhum resultado encontrado</NoResultsText>
+          <NoResultsText>No results found</NoResultsText>
         </NoResultContainer>
       ) : (
-        // Renderize os produtos se houver resultados
         filteredProducts.map((product) => {
-          return <ProductCard key={product.id} data={product} />;
+          return <ProductCard key={product.id} data={product} />
         })
       )}
     </Container>
-  );
+  )
 }
