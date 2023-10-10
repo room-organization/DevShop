@@ -1,4 +1,4 @@
-package com.room.devShop;
+package com.devshop;
 
 import android.app.Application;
 import android.content.res.Configuration;

@@ -1,14 +1,10 @@
-import React, { useEffect } from 'react'
 import {
   View,
   Text,
   ScrollView,
   TouchableOpacity,
   SafeAreaView,
-  Linking,
 } from 'react-native'
-
-import { useNavigation } from '@react-navigation/native'
 
 import { styles } from './styles'
 import { Header } from '../../components/header'
@@ -18,29 +14,40 @@ import { Cupon } from './components/Cupon'
 import { Summary } from './components/Summary'
 import useCart from '../../hooks/use-cart'
 import { api } from '../../lib/axios'
-import { RootStackParamList } from '../../routers/app.routes'
-import { StackNavigationProp } from '@react-navigation/stack'
 
-type CartScreenProp = StackNavigationProp<RootStackParamList, 'Cart'>
+import { errorMessage, successMessage } from '../../utils/toast'
+import { useStripe } from '@stripe/stripe-react-native'
 
 export function Cart() {
+  const { initPaymentSheet, presentPaymentSheet } = useStripe()
   const cart = useCart()
   const items = useCart((state) => state.items)
-  const navigation = useNavigation<CartScreenProp>()
+
   const removeAll = useCart((state) => state.removeAll)
 
-  useEffect(() => {
-    // TODO
-  }, [navigation, removeAll])
-
   async function handleCheckout() {
-    const response = await api.post('/checkout', {
+    const response = await api.post('/checkout-mobile', {
       productIds: items.map((item) => item.id),
     })
 
-    const checkoutUrl = response.data.url
+    const { error } = await initPaymentSheet({
+      paymentIntentClientSecret: response.data.paymentIntent,
+      merchantDisplayName: 'Room, INC',
+    })
 
-    await Linking.openURL(checkoutUrl)
+    if (error) {
+      console.error('Error initializing PaymentSheet:', error)
+      return
+    }
+
+    const { error: presentError } = await presentPaymentSheet()
+
+    if (presentError) {
+      console.error('Error presenting PaymentSheet:', presentError)
+      return
+    }
+    removeAll()
+    successMessage('Payment made successfully')
   }
 
   return (
@@ -63,8 +70,6 @@ export function Cart() {
             <Text style={styles.textButton}>Checkout</Text>
           </TouchableOpacity>
         </ScrollView>
-
-
       </SafeAreaView>
     </View>
   )
