@@ -27,7 +27,8 @@
       <dict>
         <key>CFBundleURLSchemes</key>
         <array>
-          <string>com.room.devShop</string>
+          <string>devshop</string>
+          <string>com.devshop</string>
         </array>
       </dict>
     </array>

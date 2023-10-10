@@ -81,9 +81,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace 'com.room.devShop'
+    namespace 'com.devshop'
     defaultConfig {
-        applicationId 'com.room.devShop'
+        applicationId 'com.devshop'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

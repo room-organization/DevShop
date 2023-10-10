@@ -3,6 +3,7 @@
     "name": "DevShop",
     "slug": "DevShop",
     "version": "1.0.0",
+    "scheme": "devshop",
     "orientation": "portrait",
     "icon": "./src/assets/images/hero.jpeg",
     "userInterfaceStyle": "light",
@@ -16,14 +17,14 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.room.devShop"
+      "bundleIdentifier": "com.devshop"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/images/hero.jpeg",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.room.devShop"
+      "package": "com.devshop"
     },
     "web": {
       "favicon": "./src/assets/images/hero.jpeg"
