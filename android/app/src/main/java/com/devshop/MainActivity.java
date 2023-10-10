@@ -1,4 +1,4 @@
-package com.room.devShop;
+package com.devshop;
 
 import android.os.Build;
 import android.os.Bundle;

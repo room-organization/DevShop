@@ -1,31 +1,99 @@
-import React from 'react'
-import { View, Text, SafeAreaView, Image } from 'react-native'
-import {Feather} from '@expo/vector-icons'
+import React, { useEffect, useState } from 'react'
 
-import { styles } from './styles'
-import { RFValue } from 'react-native-responsive-fontsize'
+
+import { 
+  Container,
+  SearchSection,
+  SearchBar,
+  IconSearch,
+  Input,
+  Categories,
+  CategoryItem,
+  IconCategoryItem,
+  Title
+ } from './styles'
+import { SearchResults } from '../../components/searchResults';
 
 export function Explore() {
+  const [search, setSearch] = useState('')  
+  const [searchResult, setSearchResult] = useState('');
+
+  useEffect(()=> {
+   console.log(search)
+ },[search])
+
   return (
-    <SafeAreaView style={styles.container}>
-      <Text>Man Fashion</Text>
-      <View style={styles.row}>
-        <Category/>
-      </View>
-      <Text>Woman Fashion</Text>
-      <View style={styles.row}>
-        
-      </View>
-    </SafeAreaView>
-  )
-}
+    <Container>
+      <SearchSection>
+        <SearchBar>
+          <IconSearch name="search"/>
+          <Input
+            placeholder="Search Product"
+            onChangeText={(text) => setSearch(text)} 
+          />
+        </SearchBar>
+      </SearchSection>
+      
 
+      {search ? (
+        // Renderize o componente SearchResults quando houver texto de pesquisa
+        <SearchResults result={search} />        
+      ) : (
+        // Renderize as categorias quando não houver texto de pesquisa
+        <Categories>
+          <CategoryItem>
+            <IconCategoryItem name="tshirt"/>
+            <Title>Camisas</Title>
+          </CategoryItem>
+          <CategoryItem>
+            <IconCategoryItem name="shoe-prints"/>
+            <Title>Sapatos Masculinos</Title>
+          </CategoryItem>
+          <CategoryItem>
+            <IconCategoryItem name="tshirt"/>
+            <Title>Roupas Infantis</Title>
+          </CategoryItem>
+          <CategoryItem>
+            <IconCategoryItem name="hat-cowboy"/>
+            <Title>Chapéus</Title>
+          </CategoryItem>
+          <CategoryItem>
+            <IconCategoryItem name="socks"/>
+            <Title>Meias</Title>
+          </CategoryItem>
+          <CategoryItem>
+            <IconCategoryItem name="suitcase"/>
+            <Title>Bolsas</Title>
+          </CategoryItem>
+          <CategoryItem>
+            <IconCategoryItem name="tshirt"/>
+            <Title>Camisas</Title>
+          </CategoryItem>
+          <CategoryItem>
+            <IconCategoryItem name="shoe-prints"/>
+            <Title>Sapatos Masculinos</Title>
+          </CategoryItem>
+          <CategoryItem>
+            <IconCategoryItem name="tshirt"/>
+            <Title>Roupas Infantis</Title>
+          </CategoryItem>
+          <CategoryItem>
+            <IconCategoryItem name="hat-cowboy"/>
+            <Title>Chapéus</Title>
+          </CategoryItem>
+          <CategoryItem>
+            <IconCategoryItem name="socks"/>
+            <Title>Meias</Title>
+          </CategoryItem>
+          <CategoryItem>
+            <IconCategoryItem name="suitcase"/>
+            <Title>Bolsas</Title>
+          </CategoryItem>
+        </Categories>
+      )}
+      
+    
+  </Container>
 
-const Category = () => {
-  return(
-    <View style={styles.info}>
-      <Feather name='cloud-off' size={RFValue(40)} style={styles.icon}/>
-      {/* <Text>Category</Text> */}
-    </View>
   )
 }

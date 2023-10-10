@@ -5,7 +5,10 @@ export const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'center',
+    width: '100%',
     flexWrap: 'wrap',
-    marginBottom: Platform.OS=== 'ios'? RFValue(80): RFValue(40),
+    gap: 8,
+    marginTop: 10,
+    marginBottom: Platform.OS === 'ios' ? RFValue(80) : RFValue(40),
   },
 })
