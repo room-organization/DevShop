@@ -1,6 +1,6 @@
 import styled from 'styled-components/native'
 
-export const Container = styled.ScrollView`
+export const Container = styled.View`
     flex: 1;
     /* background-color: red; */
     /* justify-content: center; */
@@ -18,4 +18,9 @@ export const NoResultsText = styled.Text`
   color: #555; 
   /* text-align: center;  */
   /* margin-top: 20px;  */
+`;
+
+export const FoundResult = styled.ScrollView`
+  flex: 1;
+ /*  flex-direction: row; */
 `;
