@@ -16,6 +16,7 @@ export function ProductList() {
 
     fetchProducts()
   }, [])
+  
   return (
     <View style={styles.container}>
       {products.map((product) => {

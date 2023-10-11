@@ -4,9 +4,10 @@ import { useNavigation } from '@react-navigation/native'
 import { ProductScreenProp } from '../../routers/type.routes'
 interface InfoStatusBarProps {
   src: ImageProps
+  title: string
 }
 
-export const InfoStatusBar = ({ src }: InfoStatusBarProps) => {
+export const InfoStatusBar = ({ src, title }: InfoStatusBarProps) => {
   const navigation = useNavigation<ProductScreenProp>()
 
   function openProduct() {
@@ -14,11 +15,11 @@ export const InfoStatusBar = ({ src }: InfoStatusBarProps) => {
   }
 
   return (
-    <TouchableOpacity onPress={openProduct}>
+    <TouchableOpacity onPress={openProduct} style={styles.Touchable}>
       <View style={styles.container}>
         <Image style={styles.image} source={src} />
       </View>
-      <Text style={styles.category}>Category</Text>
+      <Text style={styles.category}>{title}</Text>
     </TouchableOpacity>
   )
 }

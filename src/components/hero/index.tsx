@@ -1,29 +1,39 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text, ImageBackground, TouchableOpacity } from 'react-native'
+import { ImageBackground, Text } from 'react-native'
 import Swiper from 'react-native-swiper'
 
 import { styles } from './styles'
+import { Billboard } from '../../utils/types'
+import { api } from '../../lib/axios'
 
 export function Hero() {
 
+  const [billboard, setBillboards] = useState<Billboard[]>([])
 
-  const data = [
-    require('../../assets/images/hero.jpeg'),
-    require('../../assets/images/billboard-bg.png'),
-    require('../../assets/images/neom-WLeWJW_WneE-unsplash.jpg'),
-  ]
+  useEffect(() => {
+    async function fetchBillboards() {
+      const response = await api.get('/billboards')
+      setBillboards(response.data)
+    }
 
-  const slides = data.map((image, index) => (
+    fetchBillboards()
+  }, [])
+
+
+  const slides = billboard.map((billboard, index) => (
     <ImageBackground
-      key={index}
-      source={image}
+      key={billboard.id}
+      source={{uri: billboard.imageUrl}}
       style={styles.imageBackground}
-    />
+    >
+      <Text style={{alignSelf: 'center'}}>{billboard.label}</Text>
+    </ImageBackground>
   ))
   return (
-    <Swiper showsButtons={false} autoplay={true} style={styles.hero}>
-      {slides}
-    </Swiper>
+  <Swiper showsButtons={false} showsPagination={false} autoplay={true} autoplayTimeout={1000} style={styles.hero}>
+    {slides}
+  </Swiper>
+
    
   );
 }

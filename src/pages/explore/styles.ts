@@ -42,7 +42,7 @@ export const Categories = styled.View`
   flex-wrap: wrap;
 `;
 
-export const CategoryItem = styled.View`
+export const CategoryItem = styled.TouchableOpacity`
   flex-direction: column;
   padding: ${RFValue(10)}px;
   align-items: center;

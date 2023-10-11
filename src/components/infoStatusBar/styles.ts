@@ -1,7 +1,11 @@
 import { StyleSheet } from 'react-native'
 import theme from '../../global/styles/theme'
+import { RFValue } from 'react-native-responsive-fontsize'
 
 export const styles = StyleSheet.create({
+  Touchable:{
+    maxWidth: RFValue(70),
+  },
   container: {
     width: 55,
     height: 55,
@@ -22,6 +26,6 @@ export const styles = StyleSheet.create({
     fontStyle: 'normal',
     fontWeight: '500',
     alignSelf: 'center',
-    // marginVertical: RFValue(10)
+    marginVertical: RFValue(1)
   },
 })

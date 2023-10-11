@@ -49,7 +49,9 @@ export function Explore() {
             <IconCategoryItem name="shoe-prints"/>
             <Title>Sapatos Masculinos</Title>
           </CategoryItem>
-          <CategoryItem>
+          <CategoryItem onPress={()=>{
+            console.log('Ola')
+          }}>
             <IconCategoryItem name="tshirt"/>
             <Title>Roupas Infantis</Title>
           </CategoryItem>
