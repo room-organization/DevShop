@@ -1,4 +1,4 @@
-import { ImageBackground, Text, TouchableOpacity, View } from 'react-native'
+import { Dimensions, ImageBackground, Text, TouchableOpacity, View } from 'react-native'
 import { Feather } from '@expo/vector-icons'
 import { StackNavigationProp } from '@react-navigation/stack'
 import { RootStackParamList } from '../../routers/app.routes'
@@ -28,8 +28,12 @@ export function ProductCard({ data, ...rest }: ProductCardProps) {
     cart.addItem(data)
   }
 
+  // Define a largura do card como 45% da largura da tela
+  const screenWidth = Dimensions.get('window').width;
+  const cardWidth = (screenWidth * 45) / 100;
+
   return (
-    <TouchableOpacity style={styles.container} onPress={openProduct} {...rest}>
+    <TouchableOpacity style={[styles.container, { width: cardWidth }]} onPress={openProduct} {...rest}>
       <View style={styles.imageContainer}>
         <ImageBackground
           source={{ uri: data.images?.[0]?.url }}
@@ -50,5 +54,6 @@ export function ProductCard({ data, ...rest }: ProductCardProps) {
         <Feather name="shopping-cart" style={styles.btnIcon} />
       </TouchableOpacity>
     </TouchableOpacity>
-  )
+  );
+
 }
