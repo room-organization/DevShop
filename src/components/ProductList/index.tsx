@@ -11,11 +11,24 @@ export function ProductList() {
   useEffect(() => {
     async function fetchProducts() {
       const response = await api.get('/products')
-      setProducts(response.data)
+      const data = response.data
+
+      // Embaralhe aleatoriamente a lista de produtos
+      const shuffledProducts = shuffleArray(data)
+
+      // Selecione os primeiros 10 produtos embaralhados
+      const selectedProducts = shuffledProducts.slice(0, 10)
+
+      setProducts(selectedProducts)
     }
 
     fetchProducts()
   }, [])
+
+  // Função para embaralhar aleatoriamente um array
+  function shuffleArray(array: Product[]) {
+    return array.slice().sort(() => Math.random() - 0.5)
+  }
   
   return (
     <View style={styles.container}>

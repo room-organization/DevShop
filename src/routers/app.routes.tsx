@@ -23,7 +23,6 @@ import { Product } from '../pages/product'
 import { User } from '../pages/user'
 import CartIconWithBadge from '../pages/cart/components/CartIconWithBadge'
 
-// const {Navigator, Screen} = createBottomTabNavigator();
 
 const Tab = createBottomTabNavigator()
 
@@ -32,7 +31,7 @@ const Stack = createStackNavigator()
 export type RootStackParamList = {
   Cart: undefined
   Categories: undefined
-  CategoryItems: undefined
+  CategoryItems: { categoryId: string }
   Explore: undefined
   Favorites: undefined
   Home: undefined
@@ -41,6 +40,7 @@ export type RootStackParamList = {
   Product: { productId: string }
   User: undefined
 }
+
 
 function StackNavigator() {
   return (
@@ -68,11 +68,10 @@ function TabNavigator() {
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
-        // tabBarActiveBackgroundColor: '',
         tabBarActiveTintColor: theme.colors_backgrounds.secondary,
         tabBarInactiveBackgroundColor: '',
         tabBarInactiveTintColor: theme.colors_backgrounds.icons,
-        tabBarLabelPosition: 'below-icon', // Posicao do icone (Lado do texto ou em cima)
+        tabBarLabelPosition: 'below-icon', 
         tabBarStyle: {
           height: 60,
         },
