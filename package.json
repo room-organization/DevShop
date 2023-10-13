@@ -18,6 +18,8 @@
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/native-stack": "^6.9.13",
     "@react-navigation/stack": "^6.3.17",
+    "@reduxjs/toolkit": "^1.9.7",
+    "@stripe/stripe-react-native": "0.28.0",
     "axios": "^1.5.1",
     "expo": "~49.0.11",
     "expo-linking": "~5.0.2",
@@ -38,10 +40,10 @@
     "react-native-swiper": "^1.6.0",
     "react-native-toast-message": "^2.1.6",
     "react-native-web": "~0.19.6",
+    "react-redux": "^8.1.3",
     "stripe": "^13.9.0",
     "styled-components": "^6.0.8",
-    "zustand": "^4.4.2",
-    "@stripe/stripe-react-native": "0.28.0"
+    "zustand": "^4.4.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
