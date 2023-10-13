@@ -1,14 +1,17 @@
-import { StyleSheet, Platform } from 'react-native'
-import { RFValue } from 'react-native-responsive-fontsize'
+import { Platform, StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'center',
-    width: '100%',
     flexWrap: 'wrap',
     gap: 8,
-    marginTop: 10,
-    marginBottom: Platform.OS === 'ios' ? RFValue(80) : RFValue(40),
+    marginTop: 5,
+    marginBottom: Platform.OS === 'ios' ? 80 : 40,
   },
-})
+  cardContainer: {
+    width: '50%', 
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});

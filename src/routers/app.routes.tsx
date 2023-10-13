@@ -13,7 +13,7 @@ import theme from '../global/styles/theme'
 
 import { Cart } from '../pages/cart'
 import { Categories } from '../pages/categories'
-import { CategoryItems } from '../pages/categoryItems'
+import { CategoryItems } from '../pages/category'
 import { Explore } from '../pages/explore'
 import { Favorites } from '../pages/favorites'
 import { Home } from '../pages/home'
