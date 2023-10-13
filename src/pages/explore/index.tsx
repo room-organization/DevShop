@@ -69,7 +69,7 @@ export function Explore() {
           <IconSearch name="search"/>
           <Input
             placeholder="Search Product"
-            onChangeText={(text) => setSearch(text)} 
+            onChangeText={(text: string) => setSearch(text)} 
           />
         </SearchBar>
       </SearchSection>
