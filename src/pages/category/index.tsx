@@ -21,7 +21,7 @@ export const CategoryItems: React.FC<CategoryItemsProps> = ({ route }) => {
   useEffect(() => {
     const { categoryId } = route.params;
 
-    // Primeiro, busque os detalhes da categoria com base no ID
+    // Detalhes da categoria com base no ID
     api.get(`/categories/${categoryId}`)
       .then((response) => {
         const categoryData = response.data;
@@ -31,7 +31,7 @@ export const CategoryItems: React.FC<CategoryItemsProps> = ({ route }) => {
         console.error('Erro ao buscar categoria:', error);
       });
 
-    // Em seguida, faça uma solicitação à API para buscar a lista de produtos com base na categoria selecionada
+    // Solicitação à API para buscar a lista de produtos com base na categoria selecionada
     api.get(`/products?categoryId=${categoryId}`)
       .then((response) => {
         setProducts(response.data);
@@ -52,9 +52,6 @@ export const CategoryItems: React.FC<CategoryItemsProps> = ({ route }) => {
         renderItem={({ item }) => (
           <View>
             <ProductCard data={item}/>
-{/* 
-            <Text>{item.name}</Text>
-            <Text>{item.price}</Text> */}
           </View>
         )}
       />

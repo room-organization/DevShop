@@ -1,7 +1,8 @@
 import { Dimensions, StatusBar, Platform } from 'react-native';
 import theme from '../../global/styles/theme';
-import { RFValue } from 'react-native-responsive-fontsize';
+import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
+import Swiper from 'react-native-swiper';
 
 export const Container = styled.SafeAreaView`
   padding-top: ${StatusBar.currentHeight}px;
@@ -49,3 +50,4 @@ export const CategoryInfoTitle = styled.Text`
   margin: ${RFValue(1)}px;
   flex-wrap: wrap; 
 `;
+

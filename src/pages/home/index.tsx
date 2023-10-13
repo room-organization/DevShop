@@ -5,16 +5,18 @@ import {
   CategoryInfo,
   CategoryInfoImg,
   CategoryInfoTitle,
-  CategoryInfoImgContainer
+  CategoryInfoImgContainer,
 } from './styles'
 
-import { Hero } from '../../components/hero'
+import { Hero } from './components/hero'
 import { RowCategory } from '../../components/rowCategories'
 import { ProductList } from '../../components/ProductList'
 import { useEffect, useState } from 'react'
-import { Category } from '../../utils/types'
+import { 
+  Billboard, 
+  Category 
+} from '../../utils/types'
 import { api } from '../../lib/axios'
-import { InfoStatusBar } from '../../components/infoStatusBar'
 import { useNavigation } from '@react-navigation/native'
 import { CategoryItemsScreenProp } from '../../routers/type.routes'
 
@@ -48,10 +50,9 @@ export const Home = () => {
     fetchCategories()
   }, [])
 
-  
-
   return (
 <Container>
+
       <ScrollViewContainer showsVerticalScrollIndicator={false}>
         <CategoryBar 
           horizontal
